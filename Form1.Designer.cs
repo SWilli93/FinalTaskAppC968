@@ -55,15 +55,16 @@
             columnHeader10 = new ColumnHeader();
             columnHeader11 = new ColumnHeader();
             columnHeader12 = new ColumnHeader();
+            button9 = new Button();
             SuspendLayout();
             // 
             // listView1
             // 
             listView1.BackColor = SystemColors.ControlDark;
             listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
-            listView1.Location = new Point(37, 188);
+            listView1.Location = new Point(19, 124);
             listView1.Name = "listView1";
-            listView1.Size = new Size(480, 173);
+            listView1.Size = new Size(485, 173);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -102,7 +103,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(37, 147);
+            label1.Location = new Point(19, 83);
             label1.Name = "label1";
             label1.Size = new Size(44, 21);
             label1.TabIndex = 1;
@@ -121,7 +122,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9F);
-            button1.Location = new Point(402, 367);
+            button1.Location = new Point(384, 303);
             button1.Name = "button1";
             button1.Size = new Size(55, 23);
             button1.TabIndex = 3;
@@ -131,7 +132,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 9F);
-            button2.Location = new Point(463, 367);
+            button2.Location = new Point(445, 303);
             button2.Name = "button2";
             button2.Size = new Size(55, 23);
             button2.TabIndex = 4;
@@ -141,7 +142,7 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 9F);
-            button3.Location = new Point(341, 367);
+            button3.Location = new Point(323, 303);
             button3.Name = "button3";
             button3.Size = new Size(55, 23);
             button3.TabIndex = 5;
@@ -150,7 +151,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(262, 148);
+            button4.Location = new Point(244, 84);
             button4.Name = "button4";
             button4.Size = new Size(50, 23);
             button4.TabIndex = 6;
@@ -159,21 +160,21 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(318, 148);
+            textBox1.Location = new Point(300, 84);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(200, 23);
             textBox1.TabIndex = 7;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(840, 148);
+            textBox2.Location = new Point(822, 84);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(200, 23);
             textBox2.TabIndex = 14;
             // 
             // button5
             // 
-            button5.Location = new Point(784, 148);
+            button5.Location = new Point(766, 84);
             button5.Name = "button5";
             button5.Size = new Size(50, 23);
             button5.TabIndex = 13;
@@ -183,7 +184,7 @@
             // button6
             // 
             button6.Font = new Font("Segoe UI", 9F);
-            button6.Location = new Point(863, 367);
+            button6.Location = new Point(845, 303);
             button6.Name = "button6";
             button6.Size = new Size(55, 23);
             button6.TabIndex = 12;
@@ -193,7 +194,7 @@
             // button7
             // 
             button7.Font = new Font("Segoe UI", 9F);
-            button7.Location = new Point(985, 367);
+            button7.Location = new Point(967, 303);
             button7.Name = "button7";
             button7.Size = new Size(55, 23);
             button7.TabIndex = 11;
@@ -203,7 +204,7 @@
             // button8
             // 
             button8.Font = new Font("Segoe UI", 9F);
-            button8.Location = new Point(924, 367);
+            button8.Location = new Point(906, 303);
             button8.Name = "button8";
             button8.Size = new Size(55, 23);
             button8.TabIndex = 10;
@@ -214,7 +215,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(559, 147);
+            label3.Location = new Point(541, 83);
             label3.Name = "label3";
             label3.Size = new Size(71, 21);
             label3.TabIndex = 9;
@@ -224,16 +225,16 @@
             // 
             listView2.BackColor = SystemColors.ControlDark;
             listView2.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12 });
-            listView2.Location = new Point(559, 188);
+            listView2.Location = new Point(541, 124);
             listView2.Name = "listView2";
-            listView2.Size = new Size(480, 173);
+            listView2.Size = new Size(485, 173);
             listView2.TabIndex = 8;
             listView2.UseCompatibleStateImageBehavior = false;
             listView2.View = View.Details;
             // 
             // columnHeader7
             // 
-            columnHeader7.Text = "Part ID";
+            columnHeader7.Text = "Product ID";
             columnHeader7.Width = 80;
             // 
             // columnHeader8
@@ -261,11 +262,21 @@
             columnHeader12.Text = "Max";
             columnHeader12.Width = 80;
             // 
+            // button9
+            // 
+            button9.Location = new Point(947, 363);
+            button9.Name = "button9";
+            button9.Size = new Size(75, 23);
+            button9.TabIndex = 15;
+            button9.Text = "Exit";
+            button9.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1114, 462);
+            ClientSize = new Size(1044, 411);
+            Controls.Add(button9);
             Controls.Add(textBox2);
             Controls.Add(button5);
             Controls.Add(button6);
@@ -316,5 +327,6 @@
         private ColumnHeader columnHeader10;
         private ColumnHeader columnHeader11;
         private ColumnHeader columnHeader12;
+        private Button button9;
     }
 }
