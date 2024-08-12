@@ -1,6 +1,6 @@
 ﻿namespace FinalTaskAppC968
 {
-    partial class Form1
+    partial class MainScreen
     {
         /// <summary>
         ///  Required designer variable.
@@ -271,7 +271,7 @@
             button9.Text = "Exit";
             button9.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -292,8 +292,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(listView1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "MainScreen";
+            Text = "Main Screen";
             ResumeLayout(false);
             PerformLayout();
         }
