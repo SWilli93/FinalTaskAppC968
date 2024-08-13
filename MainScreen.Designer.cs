@@ -37,16 +37,16 @@
             columnHeader6 = new ColumnHeader();
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            MainScreenPartModifyButton = new Button();
+            MainScreenPartDeleteButton = new Button();
+            MainScreenPartAddButton = new Button();
+            PartSearchButton = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            ProductSearchButton = new Button();
+            MainScreenProductAddButton = new Button();
+            MainScreenProductDeleteButton = new Button();
+            MainScreenProductModifyButton = new Button();
             label3 = new Label();
             listView2 = new ListView();
             columnHeader7 = new ColumnHeader();
@@ -55,7 +55,7 @@
             columnHeader10 = new ColumnHeader();
             columnHeader11 = new ColumnHeader();
             columnHeader12 = new ColumnHeader();
-            button9 = new Button();
+            MainScreenExitButton = new Button();
             SuspendLayout();
             // 
             // listView1
@@ -119,44 +119,46 @@
             label2.TabIndex = 2;
             label2.Text = "Inventory Management System";
             // 
-            // button1
+            // MainScreenPartModifyButton
             // 
-            button1.Font = new Font("Segoe UI", 9F);
-            button1.Location = new Point(384, 303);
-            button1.Name = "button1";
-            button1.Size = new Size(55, 23);
-            button1.TabIndex = 3;
-            button1.Text = "Modify";
-            button1.UseVisualStyleBackColor = true;
+            MainScreenPartModifyButton.Font = new Font("Segoe UI", 9F);
+            MainScreenPartModifyButton.Location = new Point(384, 303);
+            MainScreenPartModifyButton.Name = "MainScreenPartModifyButton";
+            MainScreenPartModifyButton.Size = new Size(55, 23);
+            MainScreenPartModifyButton.TabIndex = 3;
+            MainScreenPartModifyButton.Text = "Modify";
+            MainScreenPartModifyButton.UseVisualStyleBackColor = true;
+            MainScreenPartModifyButton.Click += MainScreenPartModifyButton_Click;
             // 
-            // button2
+            // MainScreenPartDeleteButton
             // 
-            button2.Font = new Font("Segoe UI", 9F);
-            button2.Location = new Point(445, 303);
-            button2.Name = "button2";
-            button2.Size = new Size(55, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
+            MainScreenPartDeleteButton.Font = new Font("Segoe UI", 9F);
+            MainScreenPartDeleteButton.Location = new Point(445, 303);
+            MainScreenPartDeleteButton.Name = "MainScreenPartDeleteButton";
+            MainScreenPartDeleteButton.Size = new Size(55, 23);
+            MainScreenPartDeleteButton.TabIndex = 4;
+            MainScreenPartDeleteButton.Text = "Delete";
+            MainScreenPartDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // MainScreenPartAddButton
             // 
-            button3.Font = new Font("Segoe UI", 9F);
-            button3.Location = new Point(323, 303);
-            button3.Name = "button3";
-            button3.Size = new Size(55, 23);
-            button3.TabIndex = 5;
-            button3.Text = "Add";
-            button3.UseVisualStyleBackColor = true;
+            MainScreenPartAddButton.Font = new Font("Segoe UI", 9F);
+            MainScreenPartAddButton.Location = new Point(323, 303);
+            MainScreenPartAddButton.Name = "MainScreenPartAddButton";
+            MainScreenPartAddButton.Size = new Size(55, 23);
+            MainScreenPartAddButton.TabIndex = 5;
+            MainScreenPartAddButton.Text = "Add";
+            MainScreenPartAddButton.UseVisualStyleBackColor = true;
+            MainScreenPartAddButton.Click += MainScreenPartAddButton_Click;
             // 
-            // button4
+            // PartSearchButton
             // 
-            button4.Location = new Point(244, 84);
-            button4.Name = "button4";
-            button4.Size = new Size(50, 23);
-            button4.TabIndex = 6;
-            button4.Text = "Search";
-            button4.UseVisualStyleBackColor = true;
+            PartSearchButton.Location = new Point(244, 84);
+            PartSearchButton.Name = "PartSearchButton";
+            PartSearchButton.Size = new Size(50, 23);
+            PartSearchButton.TabIndex = 6;
+            PartSearchButton.Text = "Search";
+            PartSearchButton.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -172,44 +174,44 @@
             textBox2.Size = new Size(200, 23);
             textBox2.TabIndex = 14;
             // 
-            // button5
+            // ProductSearchButton
             // 
-            button5.Location = new Point(766, 84);
-            button5.Name = "button5";
-            button5.Size = new Size(50, 23);
-            button5.TabIndex = 13;
-            button5.Text = "Search";
-            button5.UseVisualStyleBackColor = true;
+            ProductSearchButton.Location = new Point(766, 84);
+            ProductSearchButton.Name = "ProductSearchButton";
+            ProductSearchButton.Size = new Size(50, 23);
+            ProductSearchButton.TabIndex = 13;
+            ProductSearchButton.Text = "Search";
+            ProductSearchButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // MainScreenProductAddButton
             // 
-            button6.Font = new Font("Segoe UI", 9F);
-            button6.Location = new Point(845, 303);
-            button6.Name = "button6";
-            button6.Size = new Size(55, 23);
-            button6.TabIndex = 12;
-            button6.Text = "Add";
-            button6.UseVisualStyleBackColor = true;
+            MainScreenProductAddButton.Font = new Font("Segoe UI", 9F);
+            MainScreenProductAddButton.Location = new Point(845, 303);
+            MainScreenProductAddButton.Name = "MainScreenProductAddButton";
+            MainScreenProductAddButton.Size = new Size(55, 23);
+            MainScreenProductAddButton.TabIndex = 12;
+            MainScreenProductAddButton.Text = "Add";
+            MainScreenProductAddButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // MainScreenProductDeleteButton
             // 
-            button7.Font = new Font("Segoe UI", 9F);
-            button7.Location = new Point(967, 303);
-            button7.Name = "button7";
-            button7.Size = new Size(55, 23);
-            button7.TabIndex = 11;
-            button7.Text = "Delete";
-            button7.UseVisualStyleBackColor = true;
+            MainScreenProductDeleteButton.Font = new Font("Segoe UI", 9F);
+            MainScreenProductDeleteButton.Location = new Point(967, 303);
+            MainScreenProductDeleteButton.Name = "MainScreenProductDeleteButton";
+            MainScreenProductDeleteButton.Size = new Size(55, 23);
+            MainScreenProductDeleteButton.TabIndex = 11;
+            MainScreenProductDeleteButton.Text = "Delete";
+            MainScreenProductDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // MainScreenProductModifyButton
             // 
-            button8.Font = new Font("Segoe UI", 9F);
-            button8.Location = new Point(906, 303);
-            button8.Name = "button8";
-            button8.Size = new Size(55, 23);
-            button8.TabIndex = 10;
-            button8.Text = "Modify";
-            button8.UseVisualStyleBackColor = true;
+            MainScreenProductModifyButton.Font = new Font("Segoe UI", 9F);
+            MainScreenProductModifyButton.Location = new Point(906, 303);
+            MainScreenProductModifyButton.Name = "MainScreenProductModifyButton";
+            MainScreenProductModifyButton.Size = new Size(55, 23);
+            MainScreenProductModifyButton.TabIndex = 10;
+            MainScreenProductModifyButton.Text = "Modify";
+            MainScreenProductModifyButton.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -262,33 +264,33 @@
             columnHeader12.Text = "Max";
             columnHeader12.Width = 80;
             // 
-            // button9
+            // MainScreenExitButton
             // 
-            button9.Location = new Point(947, 363);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 15;
-            button9.Text = "Exit";
-            button9.UseVisualStyleBackColor = true;
+            MainScreenExitButton.Location = new Point(947, 363);
+            MainScreenExitButton.Name = "MainScreenExitButton";
+            MainScreenExitButton.Size = new Size(75, 23);
+            MainScreenExitButton.TabIndex = 15;
+            MainScreenExitButton.Text = "Exit";
+            MainScreenExitButton.UseVisualStyleBackColor = true;
             // 
             // MainScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1044, 411);
-            Controls.Add(button9);
+            Controls.Add(MainScreenExitButton);
             Controls.Add(textBox2);
-            Controls.Add(button5);
-            Controls.Add(button6);
-            Controls.Add(button7);
-            Controls.Add(button8);
+            Controls.Add(ProductSearchButton);
+            Controls.Add(MainScreenProductAddButton);
+            Controls.Add(MainScreenProductDeleteButton);
+            Controls.Add(MainScreenProductModifyButton);
             Controls.Add(label3);
             Controls.Add(listView2);
             Controls.Add(textBox1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(PartSearchButton);
+            Controls.Add(MainScreenPartAddButton);
+            Controls.Add(MainScreenPartDeleteButton);
+            Controls.Add(MainScreenPartModifyButton);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(listView1);
@@ -309,16 +311,16 @@
         private ColumnHeader columnHeader6;
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button MainScreenPartModifyButton;
+        private Button MainScreenPartDeleteButton;
+        private Button MainScreenPartAddButton;
+        private Button PartSearchButton;
         private TextBox textBox1;
         private TextBox textBox2;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button ProductSearchButton;
+        private Button MainScreenProductAddButton;
+        private Button MainScreenProductDeleteButton;
+        private Button MainScreenProductModifyButton;
         private Label label3;
         private ListView listView2;
         private ColumnHeader columnHeader7;
@@ -327,6 +329,6 @@
         private ColumnHeader columnHeader10;
         private ColumnHeader columnHeader11;
         private ColumnHeader columnHeader12;
-        private Button button9;
+        private Button MainScreenExitButton;
     }
 }

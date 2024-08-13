@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalTaskAppC968
 {
-    abstract class Part
+    public abstract class Part
     {
         int PartID { get; }
         string Name { get;}
