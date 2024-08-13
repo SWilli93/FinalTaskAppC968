@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listView1 = new ListView();
+            MainScreenListView = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
@@ -48,7 +48,7 @@
             MainScreenProductDeleteButton = new Button();
             MainScreenProductModifyButton = new Button();
             label3 = new Label();
-            listView2 = new ListView();
+            MainScreenProductListView = new ListView();
             columnHeader7 = new ColumnHeader();
             columnHeader8 = new ColumnHeader();
             columnHeader9 = new ColumnHeader();
@@ -58,16 +58,16 @@
             MainScreenExitButton = new Button();
             SuspendLayout();
             // 
-            // listView1
+            // MainScreenListView
             // 
-            listView1.BackColor = SystemColors.ControlDark;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
-            listView1.Location = new Point(19, 124);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(485, 173);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            MainScreenListView.BackColor = SystemColors.ControlDark;
+            MainScreenListView.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            MainScreenListView.Location = new Point(19, 124);
+            MainScreenListView.Name = "MainScreenListView";
+            MainScreenListView.Size = new Size(485, 173);
+            MainScreenListView.TabIndex = 0;
+            MainScreenListView.UseCompatibleStateImageBehavior = false;
+            MainScreenListView.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -192,6 +192,7 @@
             MainScreenProductAddButton.TabIndex = 12;
             MainScreenProductAddButton.Text = "Add";
             MainScreenProductAddButton.UseVisualStyleBackColor = true;
+            MainScreenProductAddButton.Click += MainScreenProductAddButton_Click;
             // 
             // MainScreenProductDeleteButton
             // 
@@ -212,6 +213,7 @@
             MainScreenProductModifyButton.TabIndex = 10;
             MainScreenProductModifyButton.Text = "Modify";
             MainScreenProductModifyButton.UseVisualStyleBackColor = true;
+            MainScreenProductModifyButton.Click += MainScreenProductModifyButton_Click;
             // 
             // label3
             // 
@@ -223,16 +225,16 @@
             label3.TabIndex = 9;
             label3.Text = "Products";
             // 
-            // listView2
+            // MainScreenProductListView
             // 
-            listView2.BackColor = SystemColors.ControlDark;
-            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12 });
-            listView2.Location = new Point(541, 124);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(485, 173);
-            listView2.TabIndex = 8;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
+            MainScreenProductListView.BackColor = SystemColors.ControlDark;
+            MainScreenProductListView.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12 });
+            MainScreenProductListView.Location = new Point(541, 124);
+            MainScreenProductListView.Name = "MainScreenProductListView";
+            MainScreenProductListView.Size = new Size(485, 173);
+            MainScreenProductListView.TabIndex = 8;
+            MainScreenProductListView.UseCompatibleStateImageBehavior = false;
+            MainScreenProductListView.View = View.Details;
             // 
             // columnHeader7
             // 
@@ -285,7 +287,7 @@
             Controls.Add(MainScreenProductDeleteButton);
             Controls.Add(MainScreenProductModifyButton);
             Controls.Add(label3);
-            Controls.Add(listView2);
+            Controls.Add(MainScreenProductListView);
             Controls.Add(textBox1);
             Controls.Add(PartSearchButton);
             Controls.Add(MainScreenPartAddButton);
@@ -293,16 +295,17 @@
             Controls.Add(MainScreenPartModifyButton);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(listView1);
+            Controls.Add(MainScreenListView);
             Name = "MainScreen";
             Text = "Main Screen";
+            Load += MainScreen_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ListView listView1;
+        private ListView MainScreenListView;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
@@ -322,7 +325,7 @@
         private Button MainScreenProductDeleteButton;
         private Button MainScreenProductModifyButton;
         private Label label3;
-        private ListView listView2;
+        private ListView MainScreenProductListView;
         private ColumnHeader columnHeader7;
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;

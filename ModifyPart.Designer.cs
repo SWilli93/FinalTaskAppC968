@@ -246,7 +246,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "ModifyPart";
-            Text = "AddPart";
+            Text = "ModifyPart";
             Load += AddPart_Load;
             ResumeLayout(false);
             PerformLayout();

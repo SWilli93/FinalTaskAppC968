@@ -17,17 +17,5 @@ namespace FinalTaskAppC968
         public int Max { get; set; }
         public int MachineID { get; set; }
 
-
-        public Inhouse(int partID, string name, decimal price, int inStock, int min, int max, int machineID)
-        {
-            int PartId = partID;
-            string Name = name;
-            decimal Price = price;
-            int InStock = inStock;
-            int Min = min;
-            int Max = max;
-            int MachineID = machineID;
-        }
-
     }
 }
