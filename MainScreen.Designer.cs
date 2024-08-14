@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MainScreenListView = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
             label1 = new Label();
             label2 = new Label();
             MainScreenPartModifyButton = new Button();
@@ -48,56 +41,12 @@
             MainScreenProductDeleteButton = new Button();
             MainScreenProductModifyButton = new Button();
             label3 = new Label();
-            MainScreenProductListView = new ListView();
-            columnHeader7 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            columnHeader10 = new ColumnHeader();
-            columnHeader11 = new ColumnHeader();
-            columnHeader12 = new ColumnHeader();
             MainScreenExitButton = new Button();
+            dataGridViewMainScreenParts = new DataGridView();
+            dataGridViewMainScreenProducts = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMainScreenParts).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMainScreenProducts).BeginInit();
             SuspendLayout();
-            // 
-            // MainScreenListView
-            // 
-            MainScreenListView.BackColor = SystemColors.ControlDark;
-            MainScreenListView.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
-            MainScreenListView.Location = new Point(19, 124);
-            MainScreenListView.Name = "MainScreenListView";
-            MainScreenListView.Size = new Size(485, 173);
-            MainScreenListView.TabIndex = 0;
-            MainScreenListView.UseCompatibleStateImageBehavior = false;
-            MainScreenListView.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Part ID";
-            columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Name";
-            columnHeader2.Width = 80;
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Inventory";
-            columnHeader3.Width = 80;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Price";
-            columnHeader4.Width = 80;
-            // 
-            // columnHeader5
-            // 
-            columnHeader5.Text = "Min";
-            columnHeader5.Width = 80;
-            // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "Max";
-            columnHeader6.Width = 80;
             // 
             // label1
             // 
@@ -225,47 +174,6 @@
             label3.TabIndex = 9;
             label3.Text = "Products";
             // 
-            // MainScreenProductListView
-            // 
-            MainScreenProductListView.BackColor = SystemColors.ControlDark;
-            MainScreenProductListView.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11, columnHeader12 });
-            MainScreenProductListView.Location = new Point(541, 124);
-            MainScreenProductListView.Name = "MainScreenProductListView";
-            MainScreenProductListView.Size = new Size(485, 173);
-            MainScreenProductListView.TabIndex = 8;
-            MainScreenProductListView.UseCompatibleStateImageBehavior = false;
-            MainScreenProductListView.View = View.Details;
-            // 
-            // columnHeader7
-            // 
-            columnHeader7.Text = "Product ID";
-            columnHeader7.Width = 80;
-            // 
-            // columnHeader8
-            // 
-            columnHeader8.Text = "Name";
-            columnHeader8.Width = 80;
-            // 
-            // columnHeader9
-            // 
-            columnHeader9.Text = "Inventory";
-            columnHeader9.Width = 80;
-            // 
-            // columnHeader10
-            // 
-            columnHeader10.Text = "Price";
-            columnHeader10.Width = 80;
-            // 
-            // columnHeader11
-            // 
-            columnHeader11.Text = "Min";
-            columnHeader11.Width = 80;
-            // 
-            // columnHeader12
-            // 
-            columnHeader12.Text = "Max";
-            columnHeader12.Width = 80;
-            // 
             // MainScreenExitButton
             // 
             MainScreenExitButton.Location = new Point(947, 363);
@@ -275,11 +183,29 @@
             MainScreenExitButton.Text = "Exit";
             MainScreenExitButton.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewMainScreenParts
+            // 
+            dataGridViewMainScreenParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewMainScreenParts.Location = new Point(19, 124);
+            dataGridViewMainScreenParts.Name = "dataGridViewMainScreenParts";
+            dataGridViewMainScreenParts.Size = new Size(485, 173);
+            dataGridViewMainScreenParts.TabIndex = 16;
+            // 
+            // dataGridViewMainScreenProducts
+            // 
+            dataGridViewMainScreenProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewMainScreenProducts.Location = new Point(537, 124);
+            dataGridViewMainScreenProducts.Name = "dataGridViewMainScreenProducts";
+            dataGridViewMainScreenProducts.Size = new Size(485, 173);
+            dataGridViewMainScreenProducts.TabIndex = 17;
+            // 
             // MainScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1044, 411);
+            Controls.Add(dataGridViewMainScreenProducts);
+            Controls.Add(dataGridViewMainScreenParts);
             Controls.Add(MainScreenExitButton);
             Controls.Add(textBox2);
             Controls.Add(ProductSearchButton);
@@ -287,7 +213,6 @@
             Controls.Add(MainScreenProductDeleteButton);
             Controls.Add(MainScreenProductModifyButton);
             Controls.Add(label3);
-            Controls.Add(MainScreenProductListView);
             Controls.Add(textBox1);
             Controls.Add(PartSearchButton);
             Controls.Add(MainScreenPartAddButton);
@@ -295,23 +220,16 @@
             Controls.Add(MainScreenPartModifyButton);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(MainScreenListView);
             Name = "MainScreen";
             Text = "Main Screen";
             Load += MainScreen_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMainScreenParts).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewMainScreenProducts).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ListView MainScreenListView;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
-        private ColumnHeader columnHeader5;
-        private ColumnHeader columnHeader6;
         private Label label1;
         private Label label2;
         private Button MainScreenPartModifyButton;
@@ -325,13 +243,8 @@
         private Button MainScreenProductDeleteButton;
         private Button MainScreenProductModifyButton;
         private Label label3;
-        private ListView MainScreenProductListView;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
-        private ColumnHeader columnHeader11;
-        private ColumnHeader columnHeader12;
         private Button MainScreenExitButton;
+        private DataGridView dataGridViewMainScreenParts;
+        private DataGridView dataGridViewMainScreenProducts;
     }
 }
