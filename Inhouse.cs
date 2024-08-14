@@ -8,14 +8,20 @@ namespace FinalTaskAppC968
 {
     public class Inhouse : Part
     {
-
-        public int PartID { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int InStock { get; set; }
-        public int Min { get; set; }
-        public int Max { get; set; }
         public int MachineID { get; set; }
+
+        public Inhouse(int partID, string name, decimal price, int inStock, int min, int max, int machineID)
+        {
+            PartID = partID;
+            Name = name;
+            Price = price;
+            InStock = inStock;
+            Min = min;
+            Max = max;
+            MachineID = machineID;
+        }
+
+        public Inhouse() { }
 
     }
 }

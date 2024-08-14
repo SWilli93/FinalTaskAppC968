@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,12 @@ namespace FinalTaskAppC968
         public int Min { get; set; }
         public int Max { get; set; }
 
-        public BindingList<Part> AssociatedParts = new BindingList<Part>();
+        public BindingList<Part> AssociatedParts { get; set; }
+
+        public Product()
+        {
+            AssociatedParts = new BindingList<Part>();
+        }
 
         public void addAssociatedPart(Part part)
         {
@@ -25,13 +31,18 @@ namespace FinalTaskAppC968
 
         public bool removeAssociatedPart(int id)
         {
-            AssociatedParts.Remove(AssociatedParts[id]);
-            return true;
+            var partToRemove = AssociatedParts.FirstOrDefault(p => p.PartID == id);
+            if (partToRemove != null)
+            {
+                AssociatedParts.Remove(partToRemove);
+                return true;
+            }
+            return false;
         }
 
         public Part lookupAssociatedPart(int id)
         {
-            return AssociatedParts[id];
+            return AssociatedParts.FirstOrDefault(p => p.PartID == id);
         }
     }
 }

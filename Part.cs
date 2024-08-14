@@ -8,11 +8,11 @@ namespace FinalTaskAppC968
 {
     public abstract class Part
     {
-        int PartID { get; set; }
-        string Name { get; set; }
-        decimal Price { get; set; }
-        int InStock { get; set; }
-        int Min { get; set; }
-        int Max { get; set; }
+        public int PartID { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int InStock { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
     }
 }
