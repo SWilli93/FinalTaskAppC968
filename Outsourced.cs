@@ -12,7 +12,6 @@ namespace FinalTaskAppC968
     {
         public string CompanyName { get; set; }
 
-        // Constructor (optional but useful for initialization)
         public Outsourced(int partID, string name, decimal price, int inStock, int min, int max, string companyName)
         {
             PartID = partID;
