@@ -35,7 +35,7 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            MachineID = new Label();
+            MachineIDLabel = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -45,8 +45,8 @@
             textBox7 = new TextBox();
             InHouse = new RadioButton();
             Outsourced = new RadioButton();
-            button1 = new Button();
-            button2 = new Button();
+            AddPartCancel = new Button();
+            AddPartSave = new Button();
             SuspendLayout();
             // 
             // label1
@@ -58,7 +58,6 @@
             label1.Size = new Size(69, 21);
             label1.TabIndex = 0;
             label1.Text = "Add Part";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -109,7 +108,6 @@
             label6.Size = new Size(39, 21);
             label6.TabIndex = 5;
             label6.Text = "Max";
-            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -121,40 +119,40 @@
             label7.TabIndex = 6;
             label7.Text = "Min";
             // 
-            // MachineID
+            // MachineIDLabel
             // 
-            MachineID.AutoSize = true;
-            MachineID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MachineID.Location = new Point(42, 333);
-            MachineID.Name = "MachineID";
-            MachineID.Size = new Size(88, 21);
-            MachineID.TabIndex = 7;
-            MachineID.Text = "Machine ID";
+            MachineIDLabel.AutoSize = true;
+            MachineIDLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MachineIDLabel.Location = new Point(30, 333);
+            MachineIDLabel.Name = "MachineIDLabel";
+            MachineIDLabel.Size = new Size(88, 21);
+            MachineIDLabel.TabIndex = 7;
+            MachineIDLabel.Text = "Machine ID";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(148, 77);
+            textBox1.Location = new Point(164, 77);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 23);
             textBox1.TabIndex = 8;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(148, 118);
+            textBox2.Location = new Point(164, 118);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(138, 23);
             textBox2.TabIndex = 9;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(148, 335);
+            textBox3.Location = new Point(164, 331);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(138, 23);
             textBox3.TabIndex = 10;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(148, 160);
+            textBox4.Location = new Point(164, 160);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(138, 23);
             textBox4.TabIndex = 11;
@@ -168,7 +166,7 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(148, 205);
+            textBox6.Location = new Point(164, 207);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(138, 23);
             textBox6.TabIndex = 13;
@@ -183,51 +181,54 @@
             // InHouse
             // 
             InHouse.AutoSize = true;
+            InHouse.Checked = true;
             InHouse.Location = new Point(102, 25);
             InHouse.Name = "InHouse";
             InHouse.Size = new Size(74, 19);
             InHouse.TabIndex = 15;
+            InHouse.TabStop = true;
             InHouse.Text = "In-House";
             InHouse.UseVisualStyleBackColor = true;
+            InHouse.CheckedChanged += InHouse_CheckedChanged;
             // 
             // Outsourced
             // 
             Outsourced.AutoSize = true;
-            Outsourced.Checked = true;
             Outsourced.Location = new Point(226, 25);
             Outsourced.Name = "Outsourced";
             Outsourced.Size = new Size(87, 19);
             Outsourced.TabIndex = 16;
-            Outsourced.TabStop = true;
             Outsourced.Text = "Outsourced";
             Outsourced.UseVisualStyleBackColor = true;
             Outsourced.CheckedChanged += Outsourced_CheckedChanged;
             // 
-            // button1
+            // AddPartCancel
             // 
-            button1.Location = new Point(321, 396);
-            button1.Name = "button1";
-            button1.Size = new Size(52, 23);
-            button1.TabIndex = 17;
-            button1.Text = "Cancel";
-            button1.UseVisualStyleBackColor = true;
+            AddPartCancel.Location = new Point(321, 396);
+            AddPartCancel.Name = "AddPartCancel";
+            AddPartCancel.Size = new Size(52, 23);
+            AddPartCancel.TabIndex = 17;
+            AddPartCancel.Text = "Cancel";
+            AddPartCancel.UseVisualStyleBackColor = true;
+            AddPartCancel.Click += AddPartCancel_Click;
             // 
-            // button2
+            // AddPartSave
             // 
-            button2.Location = new Point(261, 396);
-            button2.Name = "button2";
-            button2.Size = new Size(52, 23);
-            button2.TabIndex = 18;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = true;
+            AddPartSave.Location = new Point(261, 396);
+            AddPartSave.Name = "AddPartSave";
+            AddPartSave.Size = new Size(52, 23);
+            AddPartSave.TabIndex = 18;
+            AddPartSave.Text = "Save";
+            AddPartSave.UseVisualStyleBackColor = true;
+            AddPartSave.Click += AddPartSave_Click;
             // 
             // AddPart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(421, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(AddPartSave);
+            Controls.Add(AddPartCancel);
             Controls.Add(Outsourced);
             Controls.Add(InHouse);
             Controls.Add(textBox7);
@@ -237,7 +238,7 @@
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(MachineID);
+            Controls.Add(MachineIDLabel);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -261,7 +262,7 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Label MachineID;
+        private Label MachineIDLabel;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
@@ -271,7 +272,7 @@
         private TextBox textBox7;
         private RadioButton InHouse;
         private RadioButton Outsourced;
-        private Button button1;
-        private Button button2;
+        private Button AddPartCancel;
+        private Button AddPartSave;
     }
 }

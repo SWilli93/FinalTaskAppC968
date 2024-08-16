@@ -244,6 +244,7 @@
             button5.TabIndex = 22;
             button5.Text = "Cancel";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // ModifyProduct
             // 

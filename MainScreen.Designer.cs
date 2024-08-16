@@ -88,6 +88,7 @@
             MainScreenPartDeleteButton.TabIndex = 4;
             MainScreenPartDeleteButton.Text = "Delete";
             MainScreenPartDeleteButton.UseVisualStyleBackColor = true;
+            MainScreenPartDeleteButton.Click += MainScreenPartDeleteButton_Click;
             // 
             // MainScreenPartAddButton
             // 
@@ -152,6 +153,7 @@
             MainScreenProductDeleteButton.TabIndex = 11;
             MainScreenProductDeleteButton.Text = "Delete";
             MainScreenProductDeleteButton.UseVisualStyleBackColor = true;
+            MainScreenProductDeleteButton.Click += MainScreenProductDeleteButton_Click;
             // 
             // MainScreenProductModifyButton
             // 
@@ -182,22 +184,27 @@
             MainScreenExitButton.TabIndex = 15;
             MainScreenExitButton.Text = "Exit";
             MainScreenExitButton.UseVisualStyleBackColor = true;
+            MainScreenExitButton.Click += MainScreenExitButton_Click;
             // 
             // dataGridViewMainScreenParts
             // 
             dataGridViewMainScreenParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewMainScreenParts.Location = new Point(19, 124);
             dataGridViewMainScreenParts.Name = "dataGridViewMainScreenParts";
+            dataGridViewMainScreenParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewMainScreenParts.Size = new Size(485, 173);
             dataGridViewMainScreenParts.TabIndex = 16;
+            dataGridViewMainScreenParts.CellClick += dataGridViewMainScreenParts_CellClick;
             // 
             // dataGridViewMainScreenProducts
             // 
             dataGridViewMainScreenProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewMainScreenProducts.Location = new Point(537, 124);
             dataGridViewMainScreenProducts.Name = "dataGridViewMainScreenProducts";
+            dataGridViewMainScreenProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewMainScreenProducts.Size = new Size(485, 173);
             dataGridViewMainScreenProducts.TabIndex = 17;
+            dataGridViewMainScreenProducts.CellClick += dataGridViewMainScreenProducts_CellClick;
             // 
             // MainScreen
             // 
