@@ -21,15 +21,17 @@ namespace FinalTaskAppC968
             this.ModifyPartPriceTextBox.Text = Convert.ToString(MainScreen.selectedPart.Price);
             this.ModifyPartMaxTextBox.Text = Convert.ToString(MainScreen.selectedPart.Max);
             this.ModifyPartMinTextBox.Text = Convert.ToString(MainScreen.selectedPart.Min);
-            //if (MainScreen.selectedPart.GetType() == typeof(Outsourced))
-            //{
-            //    this.ModifyPartMachineIDCompanyNameTextBox.Text = Convert.ToString(MainScreen.selectedPart.CompanyName);
-            //}
-            //else
-            //{
-            //    this.ModifyPartMachineIDCompanyNameTextBox.Text = Convert.ToString(MainScreen.selectedPart.);
-            //}
-            
+            if (MainScreen.selectedPart.GetType() == typeof(Outsourced))
+            {
+                this.Outsourced.Checked = true;
+                //this.ModifyPartMachineIDCompanyNameTextBox.Text = Convert.ToString(MainScreen.selectedPart.CompanyName);
+            }
+            else
+            {
+                this.InHouse.Checked = true;
+                //this.ModifyPartMachineIDCompanyNameTextBox.Text = Convert.ToString(MainScreen.selectedPart.MachineID);
+            }
+
         }
 
         private void Outsourced_CheckedChanged(object sender, EventArgs e)

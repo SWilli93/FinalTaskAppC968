@@ -51,6 +51,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Enabled = false;
             label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(19, 83);
             label1.Name = "label1";
@@ -61,6 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Enabled = false;
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(19, 26);
             label2.Name = "label2";
@@ -74,7 +76,7 @@
             MainScreenPartModifyButton.Location = new Point(384, 303);
             MainScreenPartModifyButton.Name = "MainScreenPartModifyButton";
             MainScreenPartModifyButton.Size = new Size(55, 23);
-            MainScreenPartModifyButton.TabIndex = 3;
+            MainScreenPartModifyButton.TabIndex = 5;
             MainScreenPartModifyButton.Text = "Modify";
             MainScreenPartModifyButton.UseVisualStyleBackColor = true;
             MainScreenPartModifyButton.Click += MainScreenPartModifyButton_Click;
@@ -85,7 +87,7 @@
             MainScreenPartDeleteButton.Location = new Point(445, 303);
             MainScreenPartDeleteButton.Name = "MainScreenPartDeleteButton";
             MainScreenPartDeleteButton.Size = new Size(55, 23);
-            MainScreenPartDeleteButton.TabIndex = 4;
+            MainScreenPartDeleteButton.TabIndex = 6;
             MainScreenPartDeleteButton.Text = "Delete";
             MainScreenPartDeleteButton.UseVisualStyleBackColor = true;
             MainScreenPartDeleteButton.Click += MainScreenPartDeleteButton_Click;
@@ -96,7 +98,7 @@
             MainScreenPartAddButton.Location = new Point(323, 303);
             MainScreenPartAddButton.Name = "MainScreenPartAddButton";
             MainScreenPartAddButton.Size = new Size(55, 23);
-            MainScreenPartAddButton.TabIndex = 5;
+            MainScreenPartAddButton.TabIndex = 4;
             MainScreenPartAddButton.Text = "Add";
             MainScreenPartAddButton.UseVisualStyleBackColor = true;
             MainScreenPartAddButton.Click += MainScreenPartAddButton_Click;
@@ -106,7 +108,7 @@
             PartSearchButton.Location = new Point(244, 84);
             PartSearchButton.Name = "PartSearchButton";
             PartSearchButton.Size = new Size(50, 23);
-            PartSearchButton.TabIndex = 6;
+            PartSearchButton.TabIndex = 1;
             PartSearchButton.Text = "Search";
             PartSearchButton.UseVisualStyleBackColor = true;
             // 
@@ -115,21 +117,21 @@
             textBox1.Location = new Point(300, 84);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(200, 23);
-            textBox1.TabIndex = 7;
+            textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(822, 84);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(200, 23);
-            textBox2.TabIndex = 14;
+            textBox2.TabIndex = 8;
             // 
             // ProductSearchButton
             // 
             ProductSearchButton.Location = new Point(766, 84);
             ProductSearchButton.Name = "ProductSearchButton";
             ProductSearchButton.Size = new Size(50, 23);
-            ProductSearchButton.TabIndex = 13;
+            ProductSearchButton.TabIndex = 7;
             ProductSearchButton.Text = "Search";
             ProductSearchButton.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +141,7 @@
             MainScreenProductAddButton.Location = new Point(845, 303);
             MainScreenProductAddButton.Name = "MainScreenProductAddButton";
             MainScreenProductAddButton.Size = new Size(55, 23);
-            MainScreenProductAddButton.TabIndex = 12;
+            MainScreenProductAddButton.TabIndex = 10;
             MainScreenProductAddButton.Text = "Add";
             MainScreenProductAddButton.UseVisualStyleBackColor = true;
             MainScreenProductAddButton.Click += MainScreenProductAddButton_Click;
@@ -150,7 +152,7 @@
             MainScreenProductDeleteButton.Location = new Point(967, 303);
             MainScreenProductDeleteButton.Name = "MainScreenProductDeleteButton";
             MainScreenProductDeleteButton.Size = new Size(55, 23);
-            MainScreenProductDeleteButton.TabIndex = 11;
+            MainScreenProductDeleteButton.TabIndex = 12;
             MainScreenProductDeleteButton.Text = "Delete";
             MainScreenProductDeleteButton.UseVisualStyleBackColor = true;
             MainScreenProductDeleteButton.Click += MainScreenProductDeleteButton_Click;
@@ -161,7 +163,7 @@
             MainScreenProductModifyButton.Location = new Point(906, 303);
             MainScreenProductModifyButton.Name = "MainScreenProductModifyButton";
             MainScreenProductModifyButton.Size = new Size(55, 23);
-            MainScreenProductModifyButton.TabIndex = 10;
+            MainScreenProductModifyButton.TabIndex = 11;
             MainScreenProductModifyButton.Text = "Modify";
             MainScreenProductModifyButton.UseVisualStyleBackColor = true;
             MainScreenProductModifyButton.Click += MainScreenProductModifyButton_Click;
@@ -169,6 +171,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Enabled = false;
             label3.Font = new Font("Segoe UI", 12F);
             label3.Location = new Point(541, 83);
             label3.Name = "label3";
@@ -181,19 +184,27 @@
             MainScreenExitButton.Location = new Point(947, 363);
             MainScreenExitButton.Name = "MainScreenExitButton";
             MainScreenExitButton.Size = new Size(75, 23);
-            MainScreenExitButton.TabIndex = 15;
+            MainScreenExitButton.TabIndex = 13;
             MainScreenExitButton.Text = "Exit";
             MainScreenExitButton.UseVisualStyleBackColor = true;
             MainScreenExitButton.Click += MainScreenExitButton_Click;
             // 
             // dataGridViewMainScreenParts
             // 
+            dataGridViewMainScreenParts.AllowUserToAddRows = false;
+            dataGridViewMainScreenParts.AllowUserToDeleteRows = false;
+            dataGridViewMainScreenParts.AllowUserToResizeColumns = false;
+            dataGridViewMainScreenParts.AllowUserToResizeRows = false;
+            dataGridViewMainScreenParts.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridViewMainScreenParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewMainScreenParts.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridViewMainScreenParts.Location = new Point(19, 124);
             dataGridViewMainScreenParts.Name = "dataGridViewMainScreenParts";
+            dataGridViewMainScreenParts.ReadOnly = true;
+            dataGridViewMainScreenParts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewMainScreenParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewMainScreenParts.Size = new Size(485, 173);
-            dataGridViewMainScreenParts.TabIndex = 16;
+            dataGridViewMainScreenParts.TabIndex = 3;
             dataGridViewMainScreenParts.CellClick += dataGridViewMainScreenParts_CellClick;
             // 
             // dataGridViewMainScreenProducts
@@ -203,7 +214,7 @@
             dataGridViewMainScreenProducts.Name = "dataGridViewMainScreenProducts";
             dataGridViewMainScreenProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewMainScreenProducts.Size = new Size(485, 173);
-            dataGridViewMainScreenProducts.TabIndex = 17;
+            dataGridViewMainScreenProducts.TabIndex = 9;
             dataGridViewMainScreenProducts.CellClick += dataGridViewMainScreenProducts_CellClick;
             // 
             // MainScreen

@@ -52,6 +52,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Enabled = false;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
@@ -62,6 +63,7 @@
             // AddPartPartIDLabel
             // 
             AddPartPartIDLabel.AutoSize = true;
+            AddPartPartIDLabel.Enabled = false;
             AddPartPartIDLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartPartIDLabel.Location = new Point(42, 75);
             AddPartPartIDLabel.Name = "AddPartPartIDLabel";
@@ -72,6 +74,7 @@
             // AddPartNameLabel
             // 
             AddPartNameLabel.AutoSize = true;
+            AddPartNameLabel.Enabled = false;
             AddPartNameLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartNameLabel.Location = new Point(42, 116);
             AddPartNameLabel.Name = "AddPartNameLabel";
@@ -82,6 +85,7 @@
             // AddPartInventoryLabel
             // 
             AddPartInventoryLabel.AutoSize = true;
+            AddPartInventoryLabel.Enabled = false;
             AddPartInventoryLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartInventoryLabel.Location = new Point(42, 158);
             AddPartInventoryLabel.Name = "AddPartInventoryLabel";
@@ -92,6 +96,7 @@
             // AddPartPriceLabel
             // 
             AddPartPriceLabel.AutoSize = true;
+            AddPartPriceLabel.Enabled = false;
             AddPartPriceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartPriceLabel.Location = new Point(42, 205);
             AddPartPriceLabel.Name = "AddPartPriceLabel";
@@ -102,6 +107,7 @@
             // AddPartMaxLabel
             // 
             AddPartMaxLabel.AutoSize = true;
+            AddPartMaxLabel.Enabled = false;
             AddPartMaxLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartMaxLabel.Location = new Point(92, 265);
             AddPartMaxLabel.Name = "AddPartMaxLabel";
@@ -112,6 +118,7 @@
             // AddPartMinLabel
             // 
             AddPartMinLabel.AutoSize = true;
+            AddPartMinLabel.Enabled = false;
             AddPartMinLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartMinLabel.Location = new Point(249, 265);
             AddPartMinLabel.Name = "AddPartMinLabel";
@@ -122,6 +129,7 @@
             // MachineIDLabel
             // 
             MachineIDLabel.AutoSize = true;
+            MachineIDLabel.Enabled = false;
             MachineIDLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MachineIDLabel.Location = new Point(30, 333);
             MachineIDLabel.Name = "MachineIDLabel";
@@ -134,49 +142,49 @@
             AddPartPartIDTextBox.Location = new Point(164, 77);
             AddPartPartIDTextBox.Name = "AddPartPartIDTextBox";
             AddPartPartIDTextBox.Size = new Size(138, 23);
-            AddPartPartIDTextBox.TabIndex = 8;
+            AddPartPartIDTextBox.TabIndex = 3;
             // 
             // AddPartNameTextBox
             // 
             AddPartNameTextBox.Location = new Point(164, 118);
             AddPartNameTextBox.Name = "AddPartNameTextBox";
             AddPartNameTextBox.Size = new Size(138, 23);
-            AddPartNameTextBox.TabIndex = 9;
+            AddPartNameTextBox.TabIndex = 4;
             // 
             // AddPartMachineIDCompanyNameTextBox
             // 
             AddPartMachineIDCompanyNameTextBox.Location = new Point(164, 331);
             AddPartMachineIDCompanyNameTextBox.Name = "AddPartMachineIDCompanyNameTextBox";
             AddPartMachineIDCompanyNameTextBox.Size = new Size(138, 23);
-            AddPartMachineIDCompanyNameTextBox.TabIndex = 10;
+            AddPartMachineIDCompanyNameTextBox.TabIndex = 9;
             // 
             // AddPartInventoryTextBox
             // 
             AddPartInventoryTextBox.Location = new Point(164, 160);
             AddPartInventoryTextBox.Name = "AddPartInventoryTextBox";
             AddPartInventoryTextBox.Size = new Size(138, 23);
-            AddPartInventoryTextBox.TabIndex = 11;
+            AddPartInventoryTextBox.TabIndex = 5;
             // 
             // AddPartMaxTextBox
             // 
             AddPartMaxTextBox.Location = new Point(148, 265);
             AddPartMaxTextBox.Name = "AddPartMaxTextBox";
             AddPartMaxTextBox.Size = new Size(70, 23);
-            AddPartMaxTextBox.TabIndex = 12;
+            AddPartMaxTextBox.TabIndex = 7;
             // 
             // AddPartPriceTextBox
             // 
             AddPartPriceTextBox.Location = new Point(164, 207);
             AddPartPriceTextBox.Name = "AddPartPriceTextBox";
             AddPartPriceTextBox.Size = new Size(138, 23);
-            AddPartPriceTextBox.TabIndex = 13;
+            AddPartPriceTextBox.TabIndex = 6;
             // 
             // AddPartMinTextBox
             // 
             AddPartMinTextBox.Location = new Point(303, 265);
             AddPartMinTextBox.Name = "AddPartMinTextBox";
             AddPartMinTextBox.Size = new Size(70, 23);
-            AddPartMinTextBox.TabIndex = 14;
+            AddPartMinTextBox.TabIndex = 8;
             // 
             // InHouse
             // 
@@ -185,7 +193,7 @@
             InHouse.Location = new Point(102, 25);
             InHouse.Name = "InHouse";
             InHouse.Size = new Size(74, 19);
-            InHouse.TabIndex = 15;
+            InHouse.TabIndex = 1;
             InHouse.TabStop = true;
             InHouse.Text = "In-House";
             InHouse.UseVisualStyleBackColor = true;
@@ -197,7 +205,7 @@
             Outsourced.Location = new Point(226, 25);
             Outsourced.Name = "Outsourced";
             Outsourced.Size = new Size(87, 19);
-            Outsourced.TabIndex = 16;
+            Outsourced.TabIndex = 2;
             Outsourced.Text = "Outsourced";
             Outsourced.UseVisualStyleBackColor = true;
             Outsourced.CheckedChanged += Outsourced_CheckedChanged;
@@ -207,7 +215,7 @@
             AddPartCancel.Location = new Point(321, 396);
             AddPartCancel.Name = "AddPartCancel";
             AddPartCancel.Size = new Size(52, 23);
-            AddPartCancel.TabIndex = 17;
+            AddPartCancel.TabIndex = 11;
             AddPartCancel.Text = "Cancel";
             AddPartCancel.UseVisualStyleBackColor = true;
             AddPartCancel.Click += AddPartCancel_Click;
@@ -217,7 +225,7 @@
             AddPartSave.Location = new Point(261, 396);
             AddPartSave.Name = "AddPartSave";
             AddPartSave.Size = new Size(52, 23);
-            AddPartSave.TabIndex = 18;
+            AddPartSave.TabIndex = 10;
             AddPartSave.Text = "Save";
             AddPartSave.UseVisualStyleBackColor = true;
             AddPartSave.Click += AddPartSave_Click;
