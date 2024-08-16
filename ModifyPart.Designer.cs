@@ -131,6 +131,7 @@
             // 
             // ModifyPartPartIDTextBox
             // 
+            ModifyPartPartIDTextBox.Enabled = false;
             ModifyPartPartIDTextBox.Location = new Point(148, 77);
             ModifyPartPartIDTextBox.Name = "ModifyPartPartIDTextBox";
             ModifyPartPartIDTextBox.Size = new Size(138, 23);

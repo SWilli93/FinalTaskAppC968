@@ -23,6 +23,6 @@ namespace FinalTaskAppC968
             CompanyName = companyName;
         }
 
-        public Outsourced() { }
+        //public Outsourced() { }
     }
 }

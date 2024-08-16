@@ -47,7 +47,7 @@ namespace FinalTaskAppC968
         }
         public void addPart(Part part)
         {
-                AllParts.Add(part);
+            AllParts.Add((Part)part);
         }
         public bool deletePart(Part part)
         {

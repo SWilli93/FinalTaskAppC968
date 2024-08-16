@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace FinalTaskAppC968
@@ -29,6 +30,10 @@ namespace FinalTaskAppC968
 
             // Example: Populate the inventory with some parts
             PopulateParts();
+
+            // Search Functionality for parts
+            //this.MainScreenSearchPartTextBox.TextChanged += new System.EventHandler(this.PartSearchButton_Click);
+
         }
 
 
@@ -44,9 +49,9 @@ namespace FinalTaskAppC968
         private void PopulateParts()
         {
             // Add some example parts to the inventory
-            inventory.addPart(new Outsourced { PartID = 1, Name = "Motor", Price = 199.99m, InStock = 10, Min = 1, Max = 20, CompanyName = "ACME Corp" });
-            inventory.addPart(new Outsourced { PartID = 2, Name = "Gearbox", Price = 89.99m, InStock = 15, Min = 1, Max = 30, CompanyName = "ACME Corp" });
-            inventory.addProduct(new Product { ProductID = 1, Name = "Bike", Price = 199.95m, InStock = 3, Min = 5, Max = 25 });
+            inventory.addPart(new Outsourced(1, "Motor", 199.99m, 10, 1, 20, "ACME Corp"));
+            inventory.addPart(new Outsourced(2, Name = "Gearbox", 89.99m, 15, 1, 30, "ACME Corp"));
+
         }
 
         private void MainScreenPartModifyButton_Click(object sender, EventArgs e)
@@ -139,6 +144,36 @@ namespace FinalTaskAppC968
         private void dataGridViewMainScreenProducts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridViewMainScreenProducts.ClearSelection();
+        }
+
+        private void PartSearchButton_Click(object sender, EventArgs e)
+        {
+            string searchText = MainScreenSearchPartTextBox.Text.ToLower();
+
+            BindingList<Part> filteredParts = new BindingList<Part>();
+
+            foreach (Part part in inventory.AllParts)
+            {
+                if (part.Name.ToLower().Contains(searchText))
+                    filteredParts.Add(part);
+            }
+
+            dataGridViewMainScreenParts.DataSource = filteredParts;
+        }
+
+        private void ProductSearchButton_Click(object sender, EventArgs e)
+        {
+            string searchText = MainScreenSearchPartTextBox.Text.ToLower();
+
+            BindingList<Product> filteredProducts = new BindingList<Product>();
+
+            foreach (Product product in inventory.Products)
+            {
+                if (product.Name.ToLower().Contains(searchText))
+                    filteredProducts.Add(product);
+            }
+
+            dataGridViewMainScreenProducts.DataSource = filteredProducts;
         }
     }
 }

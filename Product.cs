@@ -17,7 +17,18 @@ namespace FinalTaskAppC968
         public int Min { get; set; }
         public int Max { get; set; }
 
+
         public BindingList<Part> AssociatedParts { get; set; }
+        public Product(int productID, string name, decimal price, int inStock, int min, int max, BindingList<Part> associatedParts)
+        {
+            ProductID = productID;
+            Name = name;
+            Price = price;
+            InStock = inStock;
+            Min = min;
+            Max = max;
+            AssociatedParts = associatedParts;
+        }
 
         public Product()
         {
