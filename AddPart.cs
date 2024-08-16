@@ -11,14 +11,11 @@ using System.Windows.Forms;
 
 namespace FinalTaskAppC968
 {
-     MainScreen inventory;
     public partial class AddPart : Form
     {
         public AddPart()
         {
             InitializeComponent();
-
-            inventory = new Inventory();
         }
 
         private void Outsourced_CheckedChanged(object sender, EventArgs e)
@@ -38,7 +35,33 @@ namespace FinalTaskAppC968
 
         private void AddPartSave_Click(object sender, EventArgs e)
         {
-            inventory.AddPart(this);
+            if (Outsourced.Checked)
+            {
+                Part newPart = new Outsourced(
+                    Int32.Parse(this.AddPartPartIDTextBox.Text),
+                    this.AddPartNameTextBox.Text,
+                    decimal.Parse(this.AddPartPriceTextBox.Text),
+                    Int32.Parse(this.AddPartInventoryTextBox.Text),
+                    Int32.Parse(this.AddPartMinTextBox.Text),
+                    Int32.Parse(this.AddPartMaxTextBox.Text),
+                    this.AddPartMachineIDCompanyNameTextBox.Text
+                    );
+                MainScreen.inventory.addPart(newPart);
+            } 
+            else
+            {
+                Part newPart = new Inhouse(
+                    Int32.Parse(this.AddPartPartIDTextBox.Text),
+                    this.AddPartNameTextBox.Text,
+                    decimal.Parse(this.AddPartPriceTextBox.Text),
+                    Int32.Parse(this.AddPartInventoryTextBox.Text),
+                    Int32.Parse(this.AddPartMinTextBox.Text),
+                    Int32.Parse(this.AddPartMaxTextBox.Text),
+                    Int32.Parse(this.AddPartMachineIDCompanyNameTextBox.Text)
+                    );
+                MainScreen.inventory.addPart(newPart);
+            }
+            this.Close();
         }
         private void AddPartCancel_Click(object sender, EventArgs e)
         {

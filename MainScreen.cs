@@ -4,11 +4,11 @@ namespace FinalTaskAppC968
 {
     public partial class MainScreen : Form
     {
-        public Inventory inventory;
+        public static Inventory inventory;
         private DataGridView dataGridViewParts;
         private DataGridView dataGridViewProducts;
 
-        private Part selectedPart;
+        public static Part? selectedPart;
         private Product selectedProduct;
 
         public MainScreen()
