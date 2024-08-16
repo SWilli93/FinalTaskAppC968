@@ -136,6 +136,7 @@ namespace FinalTaskAppC968
             this.Close();
         }
 
+        // No item selected on Load
         private void dataGridViewMainScreenParts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridViewMainScreenParts.ClearSelection();
@@ -146,34 +147,77 @@ namespace FinalTaskAppC968
             dataGridViewMainScreenProducts.ClearSelection();
         }
 
+
+        // Search Buttons
         private void PartSearchButton_Click(object sender, EventArgs e)
         {
-            string searchText = MainScreenSearchPartTextBox.Text.ToLower();
-
-            BindingList<Part> filteredParts = new BindingList<Part>();
-
-            foreach (Part part in inventory.AllParts)
+            if (MainScreenSearchPartTextBox.Text != null)
             {
-                if (part.Name.ToLower().Contains(searchText))
-                    filteredParts.Add(part);
-            }
+                string searchText = MainScreenSearchPartTextBox.Text.ToLower();
 
-            dataGridViewMainScreenParts.DataSource = filteredParts;
+                BindingList<Part> filteredParts = new BindingList<Part>();
+
+                foreach (Part part in inventory.AllParts)
+                {
+                    if (part.Name.ToLower().Contains(searchText))
+                        filteredParts.Add(part);
+                }
+
+                dataGridViewMainScreenParts.DataSource = filteredParts;
+            }
         }
 
         private void ProductSearchButton_Click(object sender, EventArgs e)
         {
-            string searchText = MainScreenSearchPartTextBox.Text.ToLower();
-
-            BindingList<Product> filteredProducts = new BindingList<Product>();
-
-            foreach (Product product in inventory.Products)
+            if (MainScreenSearchProductsTextBox.Text != null)
             {
-                if (product.Name.ToLower().Contains(searchText))
-                    filteredProducts.Add(product);
-            }
+                string searchText = MainScreenSearchProductsTextBox.Text.ToLower();
 
-            dataGridViewMainScreenProducts.DataSource = filteredProducts;
+                BindingList<Product> filteredProducts = new BindingList<Product>();
+
+                foreach (Product product in inventory.Products)
+                {
+                    if (product.Name.ToLower().Contains(searchText))
+                        filteredProducts.Add(product);
+                }
+
+                dataGridViewMainScreenProducts.DataSource = filteredProducts;
+            }
+        }
+
+
+
+        // Search button Clearing Functionality
+        private void MainScreenSearchPartTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MainScreenSearchPartTextBox.Text))
+            {
+                dataGridViewMainScreenParts.DataSource = inventory.AllParts;
+            }
+        }
+
+        private void MainScreenSearchProductsTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MainScreenSearchProductsTextBox.Text))
+            {
+                dataGridViewMainScreenProducts.DataSource = inventory.Products;
+            }
+        }
+
+        private void dataGridViewMainScreenParts_Enter(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MainScreenSearchPartTextBox.Text))
+            {
+                dataGridViewMainScreenParts.DataSource = inventory.AllParts;
+            }
+        }
+
+        private void dataGridViewMainScreenProducts_Enter(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(MainScreenSearchProductsTextBox.Text))
+            {
+                dataGridViewMainScreenProducts.DataSource = inventory.Products;
+            }
         }
     }
 }

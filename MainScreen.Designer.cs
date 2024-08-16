@@ -35,7 +35,7 @@
             MainScreenPartAddButton = new Button();
             PartSearchButton = new Button();
             MainScreenSearchPartTextBox = new TextBox();
-            textBox2 = new TextBox();
+            MainScreenSearchProductsTextBox = new TextBox();
             ProductSearchButton = new Button();
             MainScreenProductAddButton = new Button();
             MainScreenProductDeleteButton = new Button();
@@ -117,13 +117,15 @@
             MainScreenSearchPartTextBox.Name = "MainScreenSearchPartTextBox";
             MainScreenSearchPartTextBox.Size = new Size(200, 23);
             MainScreenSearchPartTextBox.TabIndex = 2;
+            MainScreenSearchPartTextBox.MouseLeave += MainScreenSearchPartTextBox_MouseLeave;
             // 
-            // textBox2
+            // MainScreenSearchProductsTextBox
             // 
-            textBox2.Location = new Point(822, 84);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 23);
-            textBox2.TabIndex = 8;
+            MainScreenSearchProductsTextBox.Location = new Point(822, 84);
+            MainScreenSearchProductsTextBox.Name = "MainScreenSearchProductsTextBox";
+            MainScreenSearchProductsTextBox.Size = new Size(200, 23);
+            MainScreenSearchProductsTextBox.TabIndex = 8;
+            MainScreenSearchProductsTextBox.MouseLeave += MainScreenSearchProductsTextBox_MouseLeave;
             // 
             // ProductSearchButton
             // 
@@ -212,6 +214,7 @@
             dataGridViewMainScreenParts.TabIndex = 3;
             dataGridViewMainScreenParts.CellClick += dataGridViewMainScreenParts_CellClick;
             dataGridViewMainScreenParts.DataBindingComplete += dataGridViewMainScreenParts_DataBindingComplete;
+            dataGridViewMainScreenParts.Enter += dataGridViewMainScreenParts_Enter;
             // 
             // dataGridViewMainScreenProducts
             // 
@@ -233,6 +236,7 @@
             dataGridViewMainScreenProducts.TabIndex = 9;
             dataGridViewMainScreenProducts.CellClick += dataGridViewMainScreenProducts_CellClick;
             dataGridViewMainScreenProducts.DataBindingComplete += dataGridViewMainScreenProducts_DataBindingComplete;
+            dataGridViewMainScreenProducts.Enter += dataGridViewMainScreenProducts_Enter;
             // 
             // MainScreen
             // 
@@ -242,7 +246,7 @@
             Controls.Add(dataGridViewMainScreenProducts);
             Controls.Add(dataGridViewMainScreenParts);
             Controls.Add(MainScreenExitButton);
-            Controls.Add(textBox2);
+            Controls.Add(MainScreenSearchProductsTextBox);
             Controls.Add(ProductSearchButton);
             Controls.Add(MainScreenProductAddButton);
             Controls.Add(MainScreenProductDeleteButton);
@@ -272,7 +276,7 @@
         private Button MainScreenPartAddButton;
         private Button PartSearchButton;
         private TextBox MainScreenSearchPartTextBox;
-        private TextBox textBox2;
+        private TextBox MainScreenSearchProductsTextBox;
         private Button ProductSearchButton;
         private Button MainScreenProductAddButton;
         private Button MainScreenProductDeleteButton;

@@ -12,15 +12,17 @@ namespace FinalTaskAppC968
 {
     public partial class ModifyPart : Form
     {
+        Part part;
         public ModifyPart()
         {
+            part = MainScreen.selectedPart;
             InitializeComponent();
-            this.ModifyPartPartIDTextBox.Text = Convert.ToString(MainScreen.selectedPart.PartID);
-            this.ModifyPartNameTextBox.Text = Convert.ToString(MainScreen.selectedPart.Name);
-            this.ModifyPartInventoryTextBox.Text = Convert.ToString(MainScreen.selectedPart.InStock);
-            this.ModifyPartPriceTextBox.Text = Convert.ToString(MainScreen.selectedPart.Price);
-            this.ModifyPartMaxTextBox.Text = Convert.ToString(MainScreen.selectedPart.Max);
-            this.ModifyPartMinTextBox.Text = Convert.ToString(MainScreen.selectedPart.Min);
+            this.ModifyPartPartIDTextBox.Text = Convert.ToString(part.PartID);
+            this.ModifyPartNameTextBox.Text = Convert.ToString(part.Name);
+            this.ModifyPartInventoryTextBox.Text = Convert.ToString(part.InStock);
+            this.ModifyPartPriceTextBox.Text = Convert.ToString(part.Price);
+            this.ModifyPartMaxTextBox.Text = Convert.ToString(part.Max);
+            this.ModifyPartMinTextBox.Text = Convert.ToString(part.Min);
             if (MainScreen.selectedPart is Outsourced outsourcedPart)
             {
                 this.Outsourced.Checked = true;
@@ -50,7 +52,20 @@ namespace FinalTaskAppC968
 
         private void ModifyPartSaveButton_Click(object sender, EventArgs e)
         {
-
+            part.Name = this.ModifyPartNameTextBox.Text;
+            part.InStock = Int32.Parse(this.ModifyPartInventoryTextBox.Text);
+            part.Price = decimal.Parse(this.ModifyPartPriceTextBox.Text);
+            part.Max = Int32.Parse(this.ModifyPartMaxTextBox.Text);
+            part.Min = Int32.Parse(this.ModifyPartMinTextBox.Text);
+            if (part is Outsourced outsourcedPart)
+            {
+                outsourcedPart.CompanyName = this.ModifyPartMachineIDCompanyNameTextBox.Text; // Access CompanyName property
+            }
+            else if (part is Inhouse inhousePart)
+            {
+                inhousePart.MachineID = Int32.Parse(this.ModifyPartMachineIDCompanyNameTextBox.Text); // Access MachineID property
+            }
+            this.Close();
         }
     }
 }
