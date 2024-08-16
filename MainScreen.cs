@@ -19,6 +19,7 @@ namespace FinalTaskAppC968
             dataGridViewParts = new DataGridView();
             dataGridViewProducts = new DataGridView();
 
+
             SetupDataGridView1();
             SetupDataGridView2();
 
@@ -33,15 +34,11 @@ namespace FinalTaskAppC968
 
         private void SetupDataGridView1()
         {
-
             dataGridViewParts.AutoGenerateColumns = true; // Automatically create columns based on Part properties
-
         }
         private void SetupDataGridView2()
         {
-
             dataGridViewProducts.AutoGenerateColumns = true; // Automatically create columns based on Part properties
-
         }
 
         private void PopulateParts()
@@ -132,6 +129,16 @@ namespace FinalTaskAppC968
         private void MainScreenExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridViewMainScreenParts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridViewMainScreenParts.ClearSelection();
+        }
+
+        private void dataGridViewMainScreenProducts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridViewMainScreenProducts.ClearSelection();
         }
     }
 }

@@ -56,84 +56,77 @@
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(90, 21);
-            label1.TabIndex = 0;
+            label1.TabIndex = 2000;
             label1.Text = "Modify Part";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Enabled = false;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(42, 75);
             label2.Name = "label2";
             label2.Size = new Size(25, 21);
-            label2.TabIndex = 12;
+            label2.TabIndex = 2001;
             label2.Text = "ID";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Enabled = false;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(42, 116);
             label3.Name = "label3";
             label3.Size = new Size(52, 21);
-            label3.TabIndex = 13;
+            label3.TabIndex = 2002;
             label3.Text = "Name";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Enabled = false;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(42, 158);
             label4.Name = "label4";
             label4.Size = new Size(76, 21);
-            label4.TabIndex = 3;
+            label4.TabIndex = 2003;
             label4.Text = "Inventory";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Enabled = false;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(42, 205);
             label5.Name = "label5";
             label5.Size = new Size(89, 21);
-            label5.TabIndex = 4;
+            label5.TabIndex = 2004;
             label5.Text = "Price / Cost";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Enabled = false;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(92, 265);
             label6.Name = "label6";
             label6.Size = new Size(39, 21);
-            label6.TabIndex = 5;
+            label6.TabIndex = 2005;
             label6.Text = "Max";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Enabled = false;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(249, 265);
             label7.Name = "label7";
             label7.Size = new Size(37, 21);
-            label7.TabIndex = 6;
+            label7.TabIndex = 2006;
             label7.Text = "Min";
             // 
             // MachineID
             // 
             MachineID.AutoSize = true;
-            MachineID.Enabled = false;
             MachineID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MachineID.Location = new Point(42, 333);
             MachineID.Name = "MachineID";
             MachineID.Size = new Size(88, 21);
-            MachineID.TabIndex = 7;
+            MachineID.TabIndex = 2007;
             MachineID.Text = "Machine ID";
             // 
             // ModifyPartPartIDTextBox

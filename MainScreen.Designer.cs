@@ -51,23 +51,21 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Enabled = false;
             label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(19, 83);
             label1.Name = "label1";
             label1.Size = new Size(44, 21);
-            label1.TabIndex = 1;
+            label1.TabIndex = 2002;
             label1.Text = "Parts";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Enabled = false;
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(19, 26);
             label2.Name = "label2";
             label2.Size = new Size(227, 21);
-            label2.TabIndex = 2;
+            label2.TabIndex = 2000;
             label2.Text = "Inventory Management System";
             // 
             // MainScreenPartModifyButton
@@ -171,12 +169,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Enabled = false;
             label3.Font = new Font("Segoe UI", 12F);
             label3.Location = new Point(541, 83);
             label3.Name = "label3";
             label3.Size = new Size(71, 21);
-            label3.TabIndex = 9;
+            label3.TabIndex = 2003;
             label3.Text = "Products";
             // 
             // MainScreenExitButton
@@ -199,23 +196,41 @@
             dataGridViewMainScreenParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewMainScreenParts.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridViewMainScreenParts.Location = new Point(19, 124);
+            dataGridViewMainScreenParts.MultiSelect = false;
             dataGridViewMainScreenParts.Name = "dataGridViewMainScreenParts";
             dataGridViewMainScreenParts.ReadOnly = true;
             dataGridViewMainScreenParts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewMainScreenParts.RowTemplate.ReadOnly = true;
             dataGridViewMainScreenParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewMainScreenParts.ShowCellErrors = false;
+            dataGridViewMainScreenParts.ShowCellToolTips = false;
+            dataGridViewMainScreenParts.ShowEditingIcon = false;
+            dataGridViewMainScreenParts.ShowRowErrors = false;
             dataGridViewMainScreenParts.Size = new Size(485, 173);
             dataGridViewMainScreenParts.TabIndex = 3;
             dataGridViewMainScreenParts.CellClick += dataGridViewMainScreenParts_CellClick;
+            dataGridViewMainScreenParts.DataBindingComplete += dataGridViewMainScreenParts_DataBindingComplete;
             // 
             // dataGridViewMainScreenProducts
             // 
+            dataGridViewMainScreenProducts.AllowUserToAddRows = false;
+            dataGridViewMainScreenProducts.AllowUserToDeleteRows = false;
+            dataGridViewMainScreenProducts.AllowUserToResizeColumns = false;
+            dataGridViewMainScreenProducts.AllowUserToResizeRows = false;
             dataGridViewMainScreenProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewMainScreenProducts.Location = new Point(537, 124);
             dataGridViewMainScreenProducts.Name = "dataGridViewMainScreenProducts";
+            dataGridViewMainScreenProducts.ReadOnly = true;
+            dataGridViewMainScreenProducts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewMainScreenProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewMainScreenProducts.ShowCellErrors = false;
+            dataGridViewMainScreenProducts.ShowCellToolTips = false;
+            dataGridViewMainScreenProducts.ShowEditingIcon = false;
+            dataGridViewMainScreenProducts.ShowRowErrors = false;
             dataGridViewMainScreenProducts.Size = new Size(485, 173);
             dataGridViewMainScreenProducts.TabIndex = 9;
             dataGridViewMainScreenProducts.CellClick += dataGridViewMainScreenProducts_CellClick;
+            dataGridViewMainScreenProducts.DataBindingComplete += dataGridViewMainScreenProducts_DataBindingComplete;
             // 
             // MainScreen
             // 

@@ -52,89 +52,81 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Enabled = false;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(69, 21);
-            label1.TabIndex = 0;
+            label1.TabIndex = 2000;
             label1.Text = "Add Part";
             // 
             // AddPartPartIDLabel
             // 
             AddPartPartIDLabel.AutoSize = true;
-            AddPartPartIDLabel.Enabled = false;
             AddPartPartIDLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartPartIDLabel.Location = new Point(42, 75);
             AddPartPartIDLabel.Name = "AddPartPartIDLabel";
             AddPartPartIDLabel.Size = new Size(25, 21);
-            AddPartPartIDLabel.TabIndex = 1;
+            AddPartPartIDLabel.TabIndex = 2001;
             AddPartPartIDLabel.Text = "ID";
             // 
             // AddPartNameLabel
             // 
             AddPartNameLabel.AutoSize = true;
-            AddPartNameLabel.Enabled = false;
             AddPartNameLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartNameLabel.Location = new Point(42, 116);
             AddPartNameLabel.Name = "AddPartNameLabel";
             AddPartNameLabel.Size = new Size(52, 21);
-            AddPartNameLabel.TabIndex = 2;
+            AddPartNameLabel.TabIndex = 2002;
             AddPartNameLabel.Text = "Name";
             // 
             // AddPartInventoryLabel
             // 
             AddPartInventoryLabel.AutoSize = true;
-            AddPartInventoryLabel.Enabled = false;
             AddPartInventoryLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartInventoryLabel.Location = new Point(42, 158);
             AddPartInventoryLabel.Name = "AddPartInventoryLabel";
             AddPartInventoryLabel.Size = new Size(76, 21);
-            AddPartInventoryLabel.TabIndex = 3;
+            AddPartInventoryLabel.TabIndex = 2003;
             AddPartInventoryLabel.Text = "Inventory";
             // 
             // AddPartPriceLabel
             // 
             AddPartPriceLabel.AutoSize = true;
-            AddPartPriceLabel.Enabled = false;
             AddPartPriceLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartPriceLabel.Location = new Point(42, 205);
             AddPartPriceLabel.Name = "AddPartPriceLabel";
             AddPartPriceLabel.Size = new Size(89, 21);
-            AddPartPriceLabel.TabIndex = 4;
+            AddPartPriceLabel.TabIndex = 2004;
             AddPartPriceLabel.Text = "Price / Cost";
             // 
             // AddPartMaxLabel
             // 
             AddPartMaxLabel.AutoSize = true;
-            AddPartMaxLabel.Enabled = false;
             AddPartMaxLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartMaxLabel.Location = new Point(92, 265);
             AddPartMaxLabel.Name = "AddPartMaxLabel";
             AddPartMaxLabel.Size = new Size(39, 21);
-            AddPartMaxLabel.TabIndex = 5;
+            AddPartMaxLabel.TabIndex = 2005;
             AddPartMaxLabel.Text = "Max";
             // 
             // AddPartMinLabel
             // 
             AddPartMinLabel.AutoSize = true;
-            AddPartMinLabel.Enabled = false;
             AddPartMinLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddPartMinLabel.Location = new Point(249, 265);
             AddPartMinLabel.Name = "AddPartMinLabel";
             AddPartMinLabel.Size = new Size(37, 21);
-            AddPartMinLabel.TabIndex = 6;
+            AddPartMinLabel.TabIndex = 2006;
             AddPartMinLabel.Text = "Min";
             // 
             // MachineIDLabel
             // 
             MachineIDLabel.AutoSize = true;
-            MachineIDLabel.Enabled = false;
             MachineIDLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MachineIDLabel.Location = new Point(30, 333);
             MachineIDLabel.Name = "MachineIDLabel";
             MachineIDLabel.Size = new Size(88, 21);
-            MachineIDLabel.TabIndex = 7;
+            MachineIDLabel.TabIndex = 2007;
             MachineIDLabel.Text = "Machine ID";
             // 
             // AddPartPartIDTextBox
