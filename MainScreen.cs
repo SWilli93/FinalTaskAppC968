@@ -33,8 +33,6 @@ namespace FinalTaskAppC968
             // Example: Populate the inventory with some parts
             PopulateParts();
 
-            // Search Functionality for parts
-            //this.MainScreenSearchPartTextBox.TextChanged += new System.EventHandler(this.PartSearchButton_Click);
 
         }
 
@@ -53,6 +51,12 @@ namespace FinalTaskAppC968
             // Add some example parts to the inventory
             inventory.addPart(new Outsourced(1, "Motor", 199.99m, 10, 1, 20, "ACME Corp"));
             inventory.addPart(new Outsourced(2, Name = "Gearbox", 89.99m, 15, 1, 30, "ACME Corp"));
+            inventory.addPart(new Outsourced(2, Name = "Hub Cap", 89.99m, 15, 1, 30, "ACME Corp"));
+            inventory.addPart(new Inhouse(3, Name = "wheel", 29.99m, 15, 1, 30, 230));
+            inventory.addPart(new Inhouse(4, Name = "spoke", 9.99m, 15, 1, 30, 231));
+            inventory.addPart(new Inhouse(4, Name = "tire", 5.99m, 15, 1, 30, 232));
+
+
 
         }
 
@@ -91,14 +95,6 @@ namespace FinalTaskAppC968
             }
         }
 
-
-        // On Load
-        private void MainScreen_Load(object sender, EventArgs e)
-        {
-        }
-
-
-
         // Delete Buttons Part and Product
         private void MainScreenPartDeleteButton_Click(object sender, EventArgs e)
         {
@@ -118,7 +114,7 @@ namespace FinalTaskAppC968
             if (selectedProduct != 0)
             {
                 inventory.RemoveProduct(selectedProduct);
-                //selectedProduct = 0;
+
             }
             else
             {
@@ -147,7 +143,6 @@ namespace FinalTaskAppC968
             if (e.RowIndex >= 0)
             {
                 selectedProduct = (int)dataGridViewMainScreenProducts.Rows[e.RowIndex].Cells["ProductID"].Value;
-                //= inventory.Products.FirstOrDefault(p => p.ProductID == productID);
             }
         }
 
@@ -225,6 +220,7 @@ namespace FinalTaskAppC968
             {
                 dataGridViewMainScreenParts.DataSource = inventory.AllParts;
             }
+            
         }
 
         private void dataGridViewMainScreenProducts_Enter(object sender, EventArgs e)
@@ -233,6 +229,7 @@ namespace FinalTaskAppC968
             {
                 dataGridViewMainScreenProducts.DataSource = inventory.Products;
             }
+            
         }
 
         private void MainScreen_Enter(object sender, EventArgs e)

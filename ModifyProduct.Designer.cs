@@ -259,7 +259,6 @@
             ModifyProductAllParts.Size = new Size(530, 175);
             ModifyProductAllParts.TabIndex = 9;
             ModifyProductAllParts.CellClick += ModifyProductAllParts_CellClick;
-            ModifyProductAllParts.DataBindingComplete += ModifyProductAllParts_DataBindingComplete;
             ModifyProductAllParts.Enter += ModifyProductAllParts_Enter;
             // 
             // ModifyProductAssociatedParts
@@ -284,7 +283,6 @@
             ModifyProductAssociatedParts.Size = new Size(530, 175);
             ModifyProductAssociatedParts.TabIndex = 11;
             ModifyProductAssociatedParts.CellClick += ModifyProductAssociatedParts_CellClick;
-            ModifyProductAssociatedParts.DataBindingComplete += ModifyProductAssociatedParts_DataBindingComplete;
             // 
             // ModifyProduct
             // 
@@ -316,7 +314,7 @@
             Controls.Add(label1);
             Name = "ModifyProduct";
             Text = "Product";
-            FormClosed += ModifyProduct_FormClosed;
+            Load += ModifyProduct_Load;
             ((System.ComponentModel.ISupportInitialize)ModifyProductAllParts).EndInit();
             ((System.ComponentModel.ISupportInitialize)ModifyProductAssociatedParts).EndInit();
             ResumeLayout(false);

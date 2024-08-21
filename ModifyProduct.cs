@@ -17,7 +17,7 @@ namespace FinalTaskAppC968
         public Part? partToAdd;
         public int partToDelete;
 
-        Product? oldProduct = MainScreen.inventory.Products.FirstOrDefault(p => p.ProductID == MainScreen.selectedProduct);
+        Product oldProduct = MainScreen.inventory.Products.FirstOrDefault(p => p.ProductID == MainScreen.selectedProduct);
 
         public ModifyProduct()
         {
@@ -50,13 +50,14 @@ namespace FinalTaskAppC968
         private void ModifyProductSaveButton_Click(object sender, EventArgs e)
         {
             //newProduct.ProductID = Int32.Parse(ModifyProductIDTextBox.Text);
-            newProduct.Name = ModifyProductNameTextBox.Text;
-            newProduct.Price = decimal.Parse(ModifyProductPriceTextBox.Text);
-            newProduct.InStock = Int32.Parse(ModifyProductInventoryTextBox.Text);
-            newProduct.Min = Int32.Parse(ModifyProductMinTextBox.Text);
-            newProduct.Max = Int32.Parse(ModifyProductMaxTextBox.Text);
-
-            MainScreen.inventory.updateProduct(productID, newProduct);
+            if (oldProduct != null)
+            {
+                oldProduct.Name = ModifyProductNameTextBox.Text;
+                oldProduct.Price = decimal.Parse(ModifyProductPriceTextBox.Text);
+                oldProduct.InStock = Int32.Parse(ModifyProductInventoryTextBox.Text);
+                oldProduct.Min = Int32.Parse(ModifyProductMinTextBox.Text);
+                oldProduct.Max = Int32.Parse(ModifyProductMaxTextBox.Text);
+            }
             this.Close();
         }
 
@@ -122,19 +123,11 @@ namespace FinalTaskAppC968
             newProduct.removeAssociatedPart(partToDelete);
         }
 
-        private void ModifyProduct_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        private void ModifyProductAllParts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            ModifyProductAllParts.ClearSelection();
-        }
-
-        private void ModifyProductAssociatedParts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        // No selection on load
+        private void ModifyProduct_Load(object sender, EventArgs e)
         {
             ModifyProductAssociatedParts.ClearSelection();
+            ModifyProductAllParts.ClearSelection();
         }
     }
 }
