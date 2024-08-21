@@ -12,10 +12,11 @@ namespace FinalTaskAppC968
 {
     public partial class AddProduct : Form
     {
-        //BindingList<Part> associatedParts = new BindingList<Part>();
-        public Part? partToAdd;
-        public int partToDelete;
         private Product newProduct;
+        public Part? partToAdd;
+
+        public int partToDelete;
+        
         public AddProduct()
         {
             InitializeComponent();
@@ -84,6 +85,7 @@ namespace FinalTaskAppC968
             this.Close();
         }
 
+        // Search button
         private void AddProductSearchButton_Click(object sender, EventArgs e)
         {
             if (AddProductSearchTextBox.Text != null)
@@ -101,7 +103,7 @@ namespace FinalTaskAppC968
                 AddProductAllParts.DataSource = filteredParts;
             }
         }
-
+        // Reset the datasource after clearing text
         private void AddProductAllParts_Enter(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(AddProductSearchTextBox.Text))

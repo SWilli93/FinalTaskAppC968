@@ -248,7 +248,6 @@
             Controls.Add(label1);
             Name = "AddPart";
             Text = "AddPart";
-            Load += AddPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }

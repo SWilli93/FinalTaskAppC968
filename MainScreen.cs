@@ -32,8 +32,6 @@ namespace FinalTaskAppC968
 
             // Example: Populate the inventory with some parts
             PopulateParts();
-
-
         }
 
 
@@ -55,9 +53,6 @@ namespace FinalTaskAppC968
             inventory.addPart(new Inhouse(3, Name = "wheel", 29.99m, 15, 1, 30, 230));
             inventory.addPart(new Inhouse(4, Name = "spoke", 9.99m, 15, 1, 30, 231));
             inventory.addPart(new Inhouse(4, Name = "tire", 5.99m, 15, 1, 30, 232));
-
-
-
         }
 
 
@@ -68,7 +63,6 @@ namespace FinalTaskAppC968
             {
                 ModifyPart mp = new ModifyPart();
                 mp.Show();
-
             }
         }
 
@@ -76,7 +70,6 @@ namespace FinalTaskAppC968
         {
             AddPart ap = new AddPart();
             ap.Show();
-
         }
 
         // Product Add/Modify

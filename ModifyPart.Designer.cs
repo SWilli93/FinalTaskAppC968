@@ -201,7 +201,6 @@
             Outsourced.TabIndex = 2;
             Outsourced.Text = "Outsourced";
             Outsourced.UseVisualStyleBackColor = true;
-            Outsourced.CheckedChanged += Outsourced_CheckedChanged;
             // 
             // ModifyPartCancelButton
             // 
@@ -249,7 +248,6 @@
             Controls.Add(label1);
             Name = "ModifyPart";
             Text = "ModifyPart";
-            Load += AddPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }

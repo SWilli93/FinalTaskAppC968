@@ -49,7 +49,6 @@ namespace FinalTaskAppC968
         // Save Button
         private void ModifyProductSaveButton_Click(object sender, EventArgs e)
         {
-            //newProduct.ProductID = Int32.Parse(ModifyProductIDTextBox.Text);
             if (oldProduct != null)
             {
                 oldProduct.Name = ModifyProductNameTextBox.Text;

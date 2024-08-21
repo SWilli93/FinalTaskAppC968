@@ -28,11 +28,6 @@ namespace FinalTaskAppC968
             MachineIDLabel.Text = "Machine ID";
         }
 
-        private void AddPart_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddPartSave_Click(object sender, EventArgs e)
         {
             if (Outsourced.Checked)
