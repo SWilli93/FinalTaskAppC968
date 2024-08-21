@@ -159,7 +159,7 @@ namespace FinalTaskAppC968
 
 
         // Search Buttons Functionality
-        private void PartSearchButton_Click(object sender, EventArgs e)
+        private void MainScreenPartSearchButton_Click(object sender, EventArgs e)
         {
             if (MainScreenSearchPartTextBox.Text != null)
             {
@@ -177,7 +177,7 @@ namespace FinalTaskAppC968
             }
         }
 
-        private void ProductSearchButton_Click(object sender, EventArgs e)
+        private void MainScreenProductSearchButton_Click(object sender, EventArgs e)
         {
             if (MainScreenSearchProductsTextBox.Text != null)
             {
@@ -197,7 +197,7 @@ namespace FinalTaskAppC968
 
 
 
-        // Search button Clearing Functionality
+        // Search button Clearing Functionality and remapping datagridview to allParts
         private void MainScreenSearchPartTextBox_MouseLeave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(MainScreenSearchPartTextBox.Text))

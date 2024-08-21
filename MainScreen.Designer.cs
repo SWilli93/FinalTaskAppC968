@@ -33,10 +33,10 @@
             MainScreenPartModifyButton = new Button();
             MainScreenPartDeleteButton = new Button();
             MainScreenPartAddButton = new Button();
-            PartSearchButton = new Button();
+            MainScreenPartSearchButton = new Button();
             MainScreenSearchPartTextBox = new TextBox();
             MainScreenSearchProductsTextBox = new TextBox();
-            ProductSearchButton = new Button();
+            MainScreenProductSearchButton = new Button();
             MainScreenProductAddButton = new Button();
             MainScreenProductDeleteButton = new Button();
             MainScreenProductModifyButton = new Button();
@@ -101,15 +101,15 @@
             MainScreenPartAddButton.UseVisualStyleBackColor = true;
             MainScreenPartAddButton.Click += MainScreenPartAddButton_Click;
             // 
-            // PartSearchButton
+            // MainScreenPartSearchButton
             // 
-            PartSearchButton.Location = new Point(244, 84);
-            PartSearchButton.Name = "PartSearchButton";
-            PartSearchButton.Size = new Size(50, 23);
-            PartSearchButton.TabIndex = 1;
-            PartSearchButton.Text = "Search";
-            PartSearchButton.UseVisualStyleBackColor = true;
-            PartSearchButton.Click += PartSearchButton_Click;
+            MainScreenPartSearchButton.Location = new Point(244, 84);
+            MainScreenPartSearchButton.Name = "MainScreenPartSearchButton";
+            MainScreenPartSearchButton.Size = new Size(50, 23);
+            MainScreenPartSearchButton.TabIndex = 1;
+            MainScreenPartSearchButton.Text = "Search";
+            MainScreenPartSearchButton.UseVisualStyleBackColor = true;
+            MainScreenPartSearchButton.Click += MainScreenPartSearchButton_Click;
             // 
             // MainScreenSearchPartTextBox
             // 
@@ -127,15 +127,15 @@
             MainScreenSearchProductsTextBox.TabIndex = 8;
             MainScreenSearchProductsTextBox.MouseLeave += MainScreenSearchProductsTextBox_MouseLeave;
             // 
-            // ProductSearchButton
+            // MainScreenProductSearchButton
             // 
-            ProductSearchButton.Location = new Point(766, 84);
-            ProductSearchButton.Name = "ProductSearchButton";
-            ProductSearchButton.Size = new Size(50, 23);
-            ProductSearchButton.TabIndex = 7;
-            ProductSearchButton.Text = "Search";
-            ProductSearchButton.UseVisualStyleBackColor = true;
-            ProductSearchButton.Click += ProductSearchButton_Click;
+            MainScreenProductSearchButton.Location = new Point(766, 84);
+            MainScreenProductSearchButton.Name = "MainScreenProductSearchButton";
+            MainScreenProductSearchButton.Size = new Size(50, 23);
+            MainScreenProductSearchButton.TabIndex = 7;
+            MainScreenProductSearchButton.Text = "Search";
+            MainScreenProductSearchButton.UseVisualStyleBackColor = true;
+            MainScreenProductSearchButton.Click += MainScreenProductSearchButton_Click;
             // 
             // MainScreenProductAddButton
             // 
@@ -247,13 +247,13 @@
             Controls.Add(dataGridViewMainScreenParts);
             Controls.Add(MainScreenExitButton);
             Controls.Add(MainScreenSearchProductsTextBox);
-            Controls.Add(ProductSearchButton);
+            Controls.Add(MainScreenProductSearchButton);
             Controls.Add(MainScreenProductAddButton);
             Controls.Add(MainScreenProductDeleteButton);
             Controls.Add(MainScreenProductModifyButton);
             Controls.Add(label3);
             Controls.Add(MainScreenSearchPartTextBox);
-            Controls.Add(PartSearchButton);
+            Controls.Add(MainScreenPartSearchButton);
             Controls.Add(MainScreenPartAddButton);
             Controls.Add(MainScreenPartDeleteButton);
             Controls.Add(MainScreenPartModifyButton);
@@ -274,10 +274,10 @@
         private Button MainScreenPartModifyButton;
         private Button MainScreenPartDeleteButton;
         private Button MainScreenPartAddButton;
-        private Button PartSearchButton;
+        private Button MainScreenPartSearchButton;
         private TextBox MainScreenSearchPartTextBox;
         private TextBox MainScreenSearchProductsTextBox;
-        private Button ProductSearchButton;
+        private Button MainScreenProductSearchButton;
         private Button MainScreenProductAddButton;
         private Button MainScreenProductDeleteButton;
         private Button MainScreenProductModifyButton;
