@@ -18,6 +18,8 @@ namespace FinalTaskAppC968
             AllParts = new BindingList<Part>();
         }
 
+
+        // Product Add, Remove, Update
         public void addProduct(Product product)
         {
             Products.Add(product);
@@ -45,10 +47,13 @@ namespace FinalTaskAppC968
                 oldProduct.Max = product.Max;
             }
         }
+
+        // PArt Add, Delete, Update 
         public void addPart(Part part)
         {
             AllParts.Add((Part)part);
         }
+
         public bool deletePart(Part part)
         {
             if (part != null)
@@ -58,12 +63,14 @@ namespace FinalTaskAppC968
             }
             return false;
         }
+
         public Part? lookupPart(int id)
         {
             var partToFind = AllParts.FirstOrDefault(p => p.PartID == id);
             return partToFind;
             
         }
+
         public void updatePart(int id, Part part)
         {
             var oldPart = AllParts.FirstOrDefault(p => p.PartID == id);

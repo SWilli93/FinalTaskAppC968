@@ -35,7 +35,7 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            MachineID = new Label();
+            MachineIDLabel = new Label();
             ModifyPartPartIDTextBox = new TextBox();
             ModifyPartNameTextBox = new TextBox();
             ModifyPartMachineIDCompanyNameTextBox = new TextBox();
@@ -119,20 +119,20 @@
             label7.TabIndex = 2006;
             label7.Text = "Min";
             // 
-            // MachineID
+            // MachineIDLabel
             // 
-            MachineID.AutoSize = true;
-            MachineID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MachineID.Location = new Point(42, 333);
-            MachineID.Name = "MachineID";
-            MachineID.Size = new Size(88, 21);
-            MachineID.TabIndex = 2007;
-            MachineID.Text = "Machine ID";
+            MachineIDLabel.AutoSize = true;
+            MachineIDLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MachineIDLabel.Location = new Point(42, 333);
+            MachineIDLabel.Name = "MachineIDLabel";
+            MachineIDLabel.Size = new Size(88, 21);
+            MachineIDLabel.TabIndex = 2007;
+            MachineIDLabel.Text = "Machine ID";
             // 
             // ModifyPartPartIDTextBox
             // 
             ModifyPartPartIDTextBox.Enabled = false;
-            ModifyPartPartIDTextBox.Location = new Point(148, 77);
+            ModifyPartPartIDTextBox.Location = new Point(175, 77);
             ModifyPartPartIDTextBox.Name = "ModifyPartPartIDTextBox";
             ModifyPartPartIDTextBox.Size = new Size(138, 23);
             ModifyPartPartIDTextBox.TabIndex = 3;
@@ -140,42 +140,42 @@
             // 
             // ModifyPartNameTextBox
             // 
-            ModifyPartNameTextBox.Location = new Point(148, 118);
+            ModifyPartNameTextBox.Location = new Point(175, 118);
             ModifyPartNameTextBox.Name = "ModifyPartNameTextBox";
             ModifyPartNameTextBox.Size = new Size(138, 23);
             ModifyPartNameTextBox.TabIndex = 4;
             // 
             // ModifyPartMachineIDCompanyNameTextBox
             // 
-            ModifyPartMachineIDCompanyNameTextBox.Location = new Point(148, 335);
+            ModifyPartMachineIDCompanyNameTextBox.Location = new Point(175, 335);
             ModifyPartMachineIDCompanyNameTextBox.Name = "ModifyPartMachineIDCompanyNameTextBox";
             ModifyPartMachineIDCompanyNameTextBox.Size = new Size(138, 23);
             ModifyPartMachineIDCompanyNameTextBox.TabIndex = 9;
             // 
             // ModifyPartInventoryTextBox
             // 
-            ModifyPartInventoryTextBox.Location = new Point(148, 160);
+            ModifyPartInventoryTextBox.Location = new Point(175, 160);
             ModifyPartInventoryTextBox.Name = "ModifyPartInventoryTextBox";
             ModifyPartInventoryTextBox.Size = new Size(138, 23);
             ModifyPartInventoryTextBox.TabIndex = 5;
             // 
             // ModifyPartMaxTextBox
             // 
-            ModifyPartMaxTextBox.Location = new Point(148, 265);
+            ModifyPartMaxTextBox.Location = new Point(173, 265);
             ModifyPartMaxTextBox.Name = "ModifyPartMaxTextBox";
             ModifyPartMaxTextBox.Size = new Size(70, 23);
             ModifyPartMaxTextBox.TabIndex = 7;
             // 
             // ModifyPartPriceTextBox
             // 
-            ModifyPartPriceTextBox.Location = new Point(148, 205);
+            ModifyPartPriceTextBox.Location = new Point(175, 207);
             ModifyPartPriceTextBox.Name = "ModifyPartPriceTextBox";
             ModifyPartPriceTextBox.Size = new Size(138, 23);
             ModifyPartPriceTextBox.TabIndex = 6;
             // 
             // ModifyPartMinTextBox
             // 
-            ModifyPartMinTextBox.Location = new Point(303, 265);
+            ModifyPartMinTextBox.Location = new Point(292, 265);
             ModifyPartMinTextBox.Name = "ModifyPartMinTextBox";
             ModifyPartMinTextBox.Size = new Size(70, 23);
             ModifyPartMinTextBox.TabIndex = 8;
@@ -239,7 +239,7 @@
             Controls.Add(ModifyPartMachineIDCompanyNameTextBox);
             Controls.Add(ModifyPartNameTextBox);
             Controls.Add(ModifyPartPartIDTextBox);
-            Controls.Add(MachineID);
+            Controls.Add(MachineIDLabel);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -263,7 +263,7 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Label MachineID;
+        private Label MachineIDLabel;
         private TextBox ModifyPartPartIDTextBox;
         private TextBox ModifyPartNameTextBox;
         private TextBox ModifyPartMachineIDCompanyNameTextBox;

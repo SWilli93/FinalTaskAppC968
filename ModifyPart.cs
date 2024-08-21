@@ -26,6 +26,7 @@ namespace FinalTaskAppC968
             if (MainScreen.selectedPart is Outsourced outsourcedPart)
             {
                 this.Outsourced.Checked = true;
+                this.MachineIDLabel.Text = "Company Name";
                 this.ModifyPartMachineIDCompanyNameTextBox.Text = outsourcedPart.CompanyName; // Access CompanyName property
             }
             else if (MainScreen.selectedPart is Inhouse inhousePart)

@@ -21,7 +21,7 @@ namespace FinalTaskAppC968
             MachineID = machineID;
         }
 
-        public Inhouse() { }
+        //public Inhouse() { }
 
     }
 }

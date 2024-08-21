@@ -54,6 +54,8 @@ namespace FinalTaskAppC968
 
         }
 
+
+        // Part Add/Modify
         private void MainScreenPartModifyButton_Click(object sender, EventArgs e)
         {
             if (selectedPart != null)
@@ -71,6 +73,7 @@ namespace FinalTaskAppC968
 
         }
 
+        // Product Add/Modify
         private void MainScreenProductAddButton_Click(object sender, EventArgs e)
         {
             AddProduct newproduct = new AddProduct();
@@ -83,10 +86,15 @@ namespace FinalTaskAppC968
             modproduct.Show();
         }
 
+
+        // On Load
         private void MainScreen_Load(object sender, EventArgs e)
         {
         }
 
+
+
+        // Delete Buttons Part and Product
         private void MainScreenPartDeleteButton_Click(object sender, EventArgs e)
         {
             if (selectedPart != null)
@@ -100,6 +108,26 @@ namespace FinalTaskAppC968
             }
         }
 
+        private void MainScreenProductDeleteButton_Click(object sender, EventArgs e)
+        {
+            if (selectedProduct != null)
+            {
+                inventory.Products.Remove(selectedProduct);
+                selectedProduct = null;
+            }
+            else
+            {
+                MessageBox.Show("Please select a part to delete.");
+            }
+        }
+
+        // Exit Button 
+        private void MainScreenExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        // Click on Cell = Part/Product id
         private void dataGridViewMainScreenParts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -118,24 +146,6 @@ namespace FinalTaskAppC968
             }
         }
 
-        private void MainScreenProductDeleteButton_Click(object sender, EventArgs e)
-        {
-            if (selectedProduct != null)
-            {
-                inventory.Products.Remove(selectedProduct);
-                selectedProduct = null;
-            }
-            else
-            {
-                MessageBox.Show("Please select a part to delete.");
-            }
-        }
-
-        private void MainScreenExitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // No item selected on Load
         private void dataGridViewMainScreenParts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -148,7 +158,7 @@ namespace FinalTaskAppC968
         }
 
 
-        // Search Buttons
+        // Search Buttons Functionality
         private void PartSearchButton_Click(object sender, EventArgs e)
         {
             if (MainScreenSearchPartTextBox.Text != null)
