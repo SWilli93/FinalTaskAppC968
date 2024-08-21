@@ -13,6 +13,8 @@ namespace FinalTaskAppC968
 {
     public partial class AddPart : Form
     {
+        bool isNumeric = false;
+
         public AddPart()
         {
             InitializeComponent();
@@ -30,7 +32,18 @@ namespace FinalTaskAppC968
 
         private void AddPartSave_Click(object sender, EventArgs e)
         {
-            if (Outsourced.Checked)
+            if (
+                    Int32.TryParse(this.AddPartPartIDTextBox.Text, out int resultID) &&
+                    decimal.TryParse(this.AddPartPriceTextBox.Text, out decimal resultPrice) &&
+                    Int32.TryParse(this.AddPartInventoryTextBox.Text, out int resultStock) &&
+                    Int32.TryParse(this.AddPartMinTextBox.Text, out int resultMin) &&
+                    Int32.TryParse(this.AddPartMaxTextBox.Text, out int resultMax))
+            {
+                isNumeric = true;
+            }
+
+
+            if (isNumeric && Outsourced.Checked)
             {
                 Part newPart = new Outsourced(
                     Int32.Parse(this.AddPartPartIDTextBox.Text),
@@ -42,8 +55,9 @@ namespace FinalTaskAppC968
                     this.AddPartMachineIDCompanyNameTextBox.Text
                     );
                 MainScreen.inventory.addPart(newPart);
+                this.Close();
             } 
-            else
+            else if (isNumeric && InHouse.Checked && Int32.TryParse(this.AddPartMachineIDCompanyNameTextBox.Text, out int MachineID))
             {
                 Part newPart = new Inhouse(
                     Int32.Parse(this.AddPartPartIDTextBox.Text),
@@ -55,8 +69,12 @@ namespace FinalTaskAppC968
                     Int32.Parse(this.AddPartMachineIDCompanyNameTextBox.Text)
                     );
                 MainScreen.inventory.addPart(newPart);
+                this.Close();
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show("Please input valid numbers for required fields");
+            }
         }
         private void AddPartCancel_Click(object sender, EventArgs e)
         {

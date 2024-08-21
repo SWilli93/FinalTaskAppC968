@@ -91,27 +91,26 @@ namespace FinalTaskAppC968
         // Delete Buttons Part and Product
         private void MainScreenPartDeleteButton_Click(object sender, EventArgs e)
         {
-            if (selectedPart != null)
+            if (selectedPart != null && Validator.CanDeletePart(selectedPart))
             {
                 inventory.AllParts.Remove(selectedPart);
                 selectedPart = null;
             }
             else
             {
-                MessageBox.Show("Please select a part to delete.");
+                MessageBox.Show("Cannot delete part because it is associated with a product.");
             }
         }
 
         private void MainScreenProductDeleteButton_Click(object sender, EventArgs e)
         {
-            if (selectedProduct != 0)
+            if (selectedProduct != 0 && Validator.ConfirmDeletion())
             {
                 inventory.RemoveProduct(selectedProduct);
-
             }
             else
             {
-                MessageBox.Show("Please select a part to delete.");
+                MessageBox.Show("Delete Aborted");
             }
         }
 
