@@ -262,6 +262,7 @@
             Name = "MainScreen";
             Text = "Main Screen";
             Load += MainScreen_Load;
+            Enter += MainScreen_Enter;
             ((System.ComponentModel.ISupportInitialize)dataGridViewMainScreenParts).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewMainScreenProducts).EndInit();
             ResumeLayout(false);

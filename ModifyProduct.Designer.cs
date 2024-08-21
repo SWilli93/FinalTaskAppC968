@@ -136,6 +136,7 @@
             ModifyProductSearchButton.TabIndex = 7;
             ModifyProductSearchButton.Text = "Search";
             ModifyProductSearchButton.UseVisualStyleBackColor = true;
+            ModifyProductSearchButton.Click += ModifyProductSearchButton_Click;
             // 
             // ModifyProductSearchTextBox
             // 
@@ -204,6 +205,7 @@
             ModifyProductAddAssociatedPartButton.TabIndex = 10;
             ModifyProductAddAssociatedPartButton.Text = "Add";
             ModifyProductAddAssociatedPartButton.UseVisualStyleBackColor = true;
+            ModifyProductAddAssociatedPartButton.Click += ModifyProductAddAssociatedPartButton_Click;
             // 
             // ModifyProductDeleteAssociatedPartButton
             // 
@@ -213,16 +215,17 @@
             ModifyProductDeleteAssociatedPartButton.TabIndex = 12;
             ModifyProductDeleteAssociatedPartButton.Text = "Delete";
             ModifyProductDeleteAssociatedPartButton.UseVisualStyleBackColor = true;
+            ModifyProductDeleteAssociatedPartButton.Click += ModifyProductDeleteAssociatedPartButton_Click;
             // 
             // ModifyProductSaveButton
             // 
-            ModifyProductSaveButton.Enabled = false;
             ModifyProductSaveButton.Location = new Point(893, 572);
             ModifyProductSaveButton.Name = "ModifyProductSaveButton";
             ModifyProductSaveButton.Size = new Size(55, 23);
             ModifyProductSaveButton.TabIndex = 13;
             ModifyProductSaveButton.Text = "Save";
             ModifyProductSaveButton.UseVisualStyleBackColor = true;
+            ModifyProductSaveButton.Click += ModifyProductSaveButton_Click;
             // 
             // ModifyProductCancelButton
             // 
@@ -232,23 +235,56 @@
             ModifyProductCancelButton.TabIndex = 14;
             ModifyProductCancelButton.Text = "Cancel";
             ModifyProductCancelButton.UseVisualStyleBackColor = true;
-            ModifyProductCancelButton.Click += button5_Click;
+            ModifyProductCancelButton.Click += ModifyProductCancelButton_Click;
             // 
             // ModifyProductAllParts
             // 
+            ModifyProductAllParts.AllowUserToAddRows = false;
+            ModifyProductAllParts.AllowUserToDeleteRows = false;
+            ModifyProductAllParts.AllowUserToResizeColumns = false;
+            ModifyProductAllParts.AllowUserToResizeRows = false;
+            ModifyProductAllParts.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             ModifyProductAllParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ModifyProductAllParts.EditMode = DataGridViewEditMode.EditProgrammatically;
             ModifyProductAllParts.Location = new Point(499, 91);
+            ModifyProductAllParts.MultiSelect = false;
             ModifyProductAllParts.Name = "ModifyProductAllParts";
+            ModifyProductAllParts.ReadOnly = true;
+            ModifyProductAllParts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            ModifyProductAllParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ModifyProductAllParts.ShowCellErrors = false;
+            ModifyProductAllParts.ShowCellToolTips = false;
+            ModifyProductAllParts.ShowEditingIcon = false;
+            ModifyProductAllParts.ShowRowErrors = false;
             ModifyProductAllParts.Size = new Size(530, 175);
             ModifyProductAllParts.TabIndex = 9;
+            ModifyProductAllParts.CellClick += ModifyProductAllParts_CellClick;
+            ModifyProductAllParts.DataBindingComplete += ModifyProductAllParts_DataBindingComplete;
+            ModifyProductAllParts.Enter += ModifyProductAllParts_Enter;
             // 
             // ModifyProductAssociatedParts
             // 
+            ModifyProductAssociatedParts.AllowUserToAddRows = false;
+            ModifyProductAssociatedParts.AllowUserToDeleteRows = false;
+            ModifyProductAssociatedParts.AllowUserToResizeColumns = false;
+            ModifyProductAssociatedParts.AllowUserToResizeRows = false;
+            ModifyProductAssociatedParts.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             ModifyProductAssociatedParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ModifyProductAssociatedParts.EditMode = DataGridViewEditMode.EditProgrammatically;
             ModifyProductAssociatedParts.Location = new Point(499, 345);
+            ModifyProductAssociatedParts.MultiSelect = false;
             ModifyProductAssociatedParts.Name = "ModifyProductAssociatedParts";
+            ModifyProductAssociatedParts.ReadOnly = true;
+            ModifyProductAssociatedParts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            ModifyProductAssociatedParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            ModifyProductAssociatedParts.ShowCellErrors = false;
+            ModifyProductAssociatedParts.ShowCellToolTips = false;
+            ModifyProductAssociatedParts.ShowEditingIcon = false;
+            ModifyProductAssociatedParts.ShowRowErrors = false;
             ModifyProductAssociatedParts.Size = new Size(530, 175);
             ModifyProductAssociatedParts.TabIndex = 11;
+            ModifyProductAssociatedParts.CellClick += ModifyProductAssociatedParts_CellClick;
+            ModifyProductAssociatedParts.DataBindingComplete += ModifyProductAssociatedParts_DataBindingComplete;
             // 
             // ModifyProduct
             // 
@@ -280,6 +316,7 @@
             Controls.Add(label1);
             Name = "ModifyProduct";
             Text = "Product";
+            FormClosed += ModifyProduct_FormClosed;
             ((System.ComponentModel.ISupportInitialize)ModifyProductAllParts).EndInit();
             ((System.ComponentModel.ISupportInitialize)ModifyProductAssociatedParts).EndInit();
             ResumeLayout(false);

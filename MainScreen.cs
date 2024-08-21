@@ -10,7 +10,9 @@ namespace FinalTaskAppC968
         private DataGridView dataGridViewProducts;
 
         public static Part? selectedPart;
-        private Product selectedProduct;
+        public static int selectedProduct;
+
+        
 
         public MainScreen()
         {
@@ -82,8 +84,11 @@ namespace FinalTaskAppC968
 
         private void MainScreenProductModifyButton_Click(object sender, EventArgs e)
         {
-            ModifyProduct modproduct = new ModifyProduct();
-            modproduct.Show();
+            if (selectedProduct != 0)
+            {
+                ModifyProduct modproduct = new ModifyProduct();
+                modproduct.Show();
+            }
         }
 
 
@@ -110,10 +115,10 @@ namespace FinalTaskAppC968
 
         private void MainScreenProductDeleteButton_Click(object sender, EventArgs e)
         {
-            if (selectedProduct != null)
+            if (selectedProduct != 0)
             {
-                inventory.Products.Remove(selectedProduct);
-                selectedProduct = null;
+                inventory.RemoveProduct(selectedProduct);
+                //selectedProduct = 0;
             }
             else
             {
@@ -141,8 +146,8 @@ namespace FinalTaskAppC968
         {
             if (e.RowIndex >= 0)
             {
-                int productID = (int)dataGridViewMainScreenProducts.Rows[e.RowIndex].Cells["ProductID"].Value;
-                selectedProduct = inventory.Products.FirstOrDefault(p => p.ProductID == productID);
+                selectedProduct = (int)dataGridViewMainScreenProducts.Rows[e.RowIndex].Cells["ProductID"].Value;
+                //= inventory.Products.FirstOrDefault(p => p.ProductID == productID);
             }
         }
 
@@ -228,6 +233,10 @@ namespace FinalTaskAppC968
             {
                 dataGridViewMainScreenProducts.DataSource = inventory.Products;
             }
+        }
+
+        private void MainScreen_Enter(object sender, EventArgs e)
+        {
         }
     }
 }
