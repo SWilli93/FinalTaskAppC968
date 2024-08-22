@@ -25,7 +25,11 @@ namespace FinalTaskAppC968
             InitializeComponent();
             if (oldProduct != null)
             {
-                newProduct.AssociatedParts = oldProduct.AssociatedParts;
+                foreach (Part part in oldProduct.AssociatedParts)
+                {
+                    newProduct.AssociatedParts.Add(part);
+                }
+                
 
                 this.ModifyProductIDTextBox.Text = Convert.ToString(oldProduct.ProductID);
                 this.ModifyProductNameTextBox.Text = oldProduct.Name;
@@ -46,18 +50,51 @@ namespace FinalTaskAppC968
             this.Close();
         }
 
-        // Save Button
+        // Save Button & Validation
         private void ModifyProductSaveButton_Click(object sender, EventArgs e)
         {
-            if (oldProduct != null)
+
+
+            if (runchecks(out string error))
             {
-                oldProduct.Name = ModifyProductNameTextBox.Text;
-                oldProduct.Price = decimal.Parse(ModifyProductPriceTextBox.Text);
-                oldProduct.InStock = Int32.Parse(ModifyProductInventoryTextBox.Text);
-                oldProduct.Min = Int32.Parse(ModifyProductMinTextBox.Text);
-                oldProduct.Max = Int32.Parse(ModifyProductMaxTextBox.Text);
+                newProduct.Name = ModifyProductNameTextBox.Text;
+                newProduct.Price = decimal.Parse(ModifyProductPriceTextBox.Text);
+                newProduct.InStock = Int32.Parse(ModifyProductInventoryTextBox.Text);
+                newProduct.Min = Int32.Parse(ModifyProductMinTextBox.Text);
+                newProduct.Max = Int32.Parse(ModifyProductMaxTextBox.Text);
+
+                MainScreen.inventory.updateProduct(productID, newProduct);
+                this.Close();
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show(error);
+            }
+        }
+
+        private bool runchecks(out string error)
+        {
+            error = string.Empty;
+
+            if (
+                    !Int32.TryParse(this.ModifyProductIDTextBox.Text, out int resultID) ||
+                    !decimal.TryParse(this.ModifyProductPriceTextBox.Text, out decimal resultPrice) ||
+                    !Int32.TryParse(this.ModifyProductInventoryTextBox.Text, out int resultStock) ||
+                    !Int32.TryParse(this.ModifyProductMinTextBox.Text, out int resultMin) ||
+                    !Int32.TryParse(this.ModifyProductMaxTextBox.Text, out int resultMax))
+            {
+                error = "Please input valid numbers for required fields";
+                return false;
+            }
+
+
+            if (!Validator.ValidateMinMaxInventory(Int32.Parse(ModifyProductMinTextBox.Text), Int32.Parse(ModifyProductMaxTextBox.Text), Int32.Parse(ModifyProductInventoryTextBox.Text), out string errorMessage))
+
+            {
+                error = errorMessage;
+                return false;
+            }
+            return true;
         }
 
 

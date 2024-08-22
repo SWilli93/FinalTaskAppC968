@@ -13,7 +13,6 @@ namespace FinalTaskAppC968
     public partial class ModifyPart : Form
     {
         Part part;
-        bool isNumeric = false;
 
         public ModifyPart()
         {
@@ -46,20 +45,7 @@ namespace FinalTaskAppC968
 
         private void ModifyPartSaveButton_Click(object sender, EventArgs e)
         {
-            // Validation if fields have valid numbers
-            if (
-                    Int32.TryParse(this.ModifyPartPartIDTextBox.Text, out int resultID) &&
-                    decimal.TryParse(this.ModifyPartPriceTextBox.Text, out decimal resultPrice) &&
-                    Int32.TryParse(this.ModifyPartInventoryTextBox.Text, out int resultStock) &&
-                    Int32.TryParse(this.ModifyPartMinTextBox.Text, out int resultMin) &&
-                    Int32.TryParse(this.ModifyPartMaxTextBox.Text, out int resultMax) 
-                )
-            {
-                isNumeric = true;
-            }
-
-
-            if (isNumeric)
+            if (runchecks(out string error))
             {
                 // Modify Part if it is all validated
                 part.Name = this.ModifyPartNameTextBox.Text;
@@ -77,15 +63,37 @@ namespace FinalTaskAppC968
                     inhousePart.MachineID = Int32.Parse(this.ModifyPartMachineIDCompanyNameTextBox.Text); // Access MachineID property
                     this.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Please input valid numbers for required fields");
-                }
+
             }
             else
             {
-                MessageBox.Show("Please input valid numbers for required fields");
+                MessageBox.Show(error);
             }
+        }
+
+        private bool runchecks(out string error)
+        {
+            error = string.Empty;
+
+            if (
+                    //!Int32.TryParse(this.ModifyPartIDTextBox.Text, out int resultID) ||
+                    !decimal.TryParse(this.ModifyPartPriceTextBox.Text, out decimal resultPrice) ||
+                    !Int32.TryParse(this.ModifyPartInventoryTextBox.Text, out int resultStock) ||
+                    !Int32.TryParse(this.ModifyPartMinTextBox.Text, out int resultMin) ||
+                    !Int32.TryParse(this.ModifyPartMaxTextBox.Text, out int resultMax))
+            {
+                error = "Please input valid numbers for required fields";
+                return false;
+            }
+
+
+            if (!Validator.ValidateMinMaxInventory(Int32.Parse(ModifyPartMinTextBox.Text), Int32.Parse(ModifyPartMaxTextBox.Text), Int32.Parse(ModifyPartInventoryTextBox.Text), out string errorMessage))
+
+            {
+                error = errorMessage;
+                return false;
+            }
+            return true;
         }
     }
 }

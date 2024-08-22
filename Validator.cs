@@ -10,7 +10,7 @@ namespace FinalTaskAppC968
     {
 
         // Validate min/max/inventory bounds
-        public static bool ValidateMinMaxInventory(int min, int max, int inventory, out string errorMessage)
+        public static bool ValidateMinMaxInventory(int min, int max, int InStock, out string errorMessage)
         {
             errorMessage = string.Empty;
 
@@ -20,7 +20,7 @@ namespace FinalTaskAppC968
                 return false;
             }
 
-            if (inventory < min || inventory > max)
+            if (InStock < min || InStock > max)
             {
                 errorMessage = "Inventory must be within the Min and Max bounds.";
                 return false;

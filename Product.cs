@@ -52,7 +52,7 @@ namespace FinalTaskAppC968
             return false;
         }
 
-        public Part lookupAssociatedPart(int id)
+        public Part? lookupAssociatedPart(int id)
         {
             return AssociatedParts.FirstOrDefault(p => p.PartID == id);
         }

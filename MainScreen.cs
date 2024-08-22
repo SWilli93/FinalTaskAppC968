@@ -49,10 +49,10 @@ namespace FinalTaskAppC968
             // Add some example parts to the inventory
             inventory.addPart(new Outsourced(1, "Motor", 199.99m, 10, 1, 20, "ACME Corp"));
             inventory.addPart(new Outsourced(2, Name = "Gearbox", 89.99m, 15, 1, 30, "ACME Corp"));
-            inventory.addPart(new Outsourced(2, Name = "Hub Cap", 89.99m, 15, 1, 30, "ACME Corp"));
+            inventory.addPart(new Outsourced(5, Name = "Hub Cap", 89.99m, 15, 1, 30, "ACME Corp"));
             inventory.addPart(new Inhouse(3, Name = "wheel", 29.99m, 15, 1, 30, 230));
             inventory.addPart(new Inhouse(4, Name = "spoke", 9.99m, 15, 1, 30, 231));
-            inventory.addPart(new Inhouse(4, Name = "tire", 5.99m, 15, 1, 30, 232));
+            inventory.addPart(new Inhouse(6, Name = "tire", 5.99m, 15, 1, 30, 232));
         }
 
 
@@ -91,7 +91,7 @@ namespace FinalTaskAppC968
         // Delete Buttons Part and Product
         private void MainScreenPartDeleteButton_Click(object sender, EventArgs e)
         {
-            if (selectedPart != null && Validator.CanDeletePart(selectedPart))
+            if (selectedPart != null && Validator.CanDeletePart(selectedPart) && Validator.ConfirmDeletion())
             {
                 inventory.AllParts.Remove(selectedPart);
                 selectedPart = null;
