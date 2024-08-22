@@ -76,7 +76,6 @@ namespace FinalTaskAppC968
             error = string.Empty;
 
             if (
-                    //!Int32.TryParse(this.ModifyPartIDTextBox.Text, out int resultID) ||
                     !decimal.TryParse(this.ModifyPartPriceTextBox.Text, out decimal resultPrice) ||
                     !Int32.TryParse(this.ModifyPartInventoryTextBox.Text, out int resultStock) ||
                     !Int32.TryParse(this.ModifyPartMinTextBox.Text, out int resultMin) ||

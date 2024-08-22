@@ -131,6 +131,7 @@
             // 
             // AddPartPartIDTextBox
             // 
+            AddPartPartIDTextBox.Enabled = false;
             AddPartPartIDTextBox.Location = new Point(164, 77);
             AddPartPartIDTextBox.Name = "AddPartPartIDTextBox";
             AddPartPartIDTextBox.Size = new Size(138, 23);

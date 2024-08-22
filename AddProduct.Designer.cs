@@ -156,6 +156,7 @@
             // 
             // AddProductIDTextBox
             // 
+            AddProductIDTextBox.Enabled = false;
             AddProductIDTextBox.Location = new Point(197, 191);
             AddProductIDTextBox.Name = "AddProductIDTextBox";
             AddProductIDTextBox.Size = new Size(100, 23);

@@ -16,11 +16,13 @@ namespace FinalTaskAppC968
         public Part? partToAdd;
         
         public int partToDelete;
-        
+        int Id = MainScreen.inventory.GenerateUniqueProductID();
+
         public AddProduct()
         {
             InitializeComponent();
             newProduct = new Product();
+            this.AddProductIDTextBox.Text = Convert.ToString(Id);
 
 
             AddProductAllParts.DataSource = MainScreen.inventory.AllParts;
@@ -30,6 +32,7 @@ namespace FinalTaskAppC968
         // Cancel Button
         private void AddProductCancelButton_Click(object sender, EventArgs e)
         {
+            MainScreen.inventory.productCounter--;
             this.Close();
         }
 
@@ -78,7 +81,7 @@ namespace FinalTaskAppC968
 
             if (runchecks(out string error))
             {
-                newProduct.ProductID = Int32.Parse(AddProductIDTextBox.Text);
+                newProduct.ProductID = Id;
                 newProduct.Name = AddProductNameTextBox.Text;
                 newProduct.Price = decimal.Parse(AddProductPriceTextBox.Text);
                 newProduct.InStock = Int32.Parse(AddProductInventoryTextBox.Text);
@@ -99,7 +102,6 @@ namespace FinalTaskAppC968
             error = string.Empty;
 
             if (
-                    !Int32.TryParse(this.AddProductIDTextBox.Text, out int resultID) ||
                     !decimal.TryParse(this.AddProductPriceTextBox.Text, out decimal resultPrice) ||
                     !Int32.TryParse(this.AddProductInventoryTextBox.Text, out int resultStock) ||
                     !Int32.TryParse(this.AddProductMinTextBox.Text, out int resultMin) ||

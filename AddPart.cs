@@ -14,10 +14,13 @@ namespace FinalTaskAppC968
     public partial class AddPart : Form
     {
         bool isNumeric = false;
+        int Id = MainScreen.inventory.GenerateUniquePartID();
 
         public AddPart()
         {
             InitializeComponent();
+
+            this.AddPartPartIDTextBox.Text = Convert.ToString(Id);
         }
 
         private void Outsourced_CheckedChanged(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace FinalTaskAppC968
                 if (Outsourced.Checked)
                 {
                     Part newPart = new Outsourced(
-                        Int32.Parse(this.AddPartPartIDTextBox.Text),
+                        Id,
                         this.AddPartNameTextBox.Text,
                         decimal.Parse(this.AddPartPriceTextBox.Text),
                         Int32.Parse(this.AddPartInventoryTextBox.Text),
@@ -53,7 +56,7 @@ namespace FinalTaskAppC968
                 else if (InHouse.Checked && Int32.TryParse(this.AddPartMachineIDCompanyNameTextBox.Text, out int MachineID))
                 {
                     Part newPart = new Inhouse(
-                        Int32.Parse(this.AddPartPartIDTextBox.Text),
+                        Id,
                         this.AddPartNameTextBox.Text,
                         decimal.Parse(this.AddPartPriceTextBox.Text),
                         Int32.Parse(this.AddPartInventoryTextBox.Text),
@@ -77,7 +80,6 @@ namespace FinalTaskAppC968
             error = string.Empty;
 
             if (
-                    !Int32.TryParse(this.AddPartPartIDTextBox.Text, out int resultID) ||
                     !decimal.TryParse(this.AddPartPriceTextBox.Text, out decimal resultPrice) ||
                     !Int32.TryParse(this.AddPartInventoryTextBox.Text, out int resultStock) ||
                     !Int32.TryParse(this.AddPartMinTextBox.Text, out int resultMin) ||
@@ -98,6 +100,7 @@ namespace FinalTaskAppC968
         }
         private void AddPartCancel_Click(object sender, EventArgs e)
         {
+            MainScreen.inventory.partCounter--;
             this.Close();
         }
     }

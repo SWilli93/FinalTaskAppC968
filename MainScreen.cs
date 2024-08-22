@@ -21,6 +21,7 @@ namespace FinalTaskAppC968
             inventory = new Inventory();
             dataGridViewParts = new DataGridView();
             dataGridViewProducts = new DataGridView();
+            
 
 
             SetupDataGridView1();
@@ -47,12 +48,12 @@ namespace FinalTaskAppC968
         private void PopulateParts()
         {
             // Add some example parts to the inventory
-            inventory.addPart(new Outsourced(1, "Motor", 199.99m, 10, 1, 20, "ACME Corp"));
-            inventory.addPart(new Outsourced(2, Name = "Gearbox", 89.99m, 15, 1, 30, "ACME Corp"));
-            inventory.addPart(new Outsourced(5, Name = "Hub Cap", 89.99m, 15, 1, 30, "ACME Corp"));
-            inventory.addPart(new Inhouse(3, Name = "wheel", 29.99m, 15, 1, 30, 230));
-            inventory.addPart(new Inhouse(4, Name = "spoke", 9.99m, 15, 1, 30, 231));
-            inventory.addPart(new Inhouse(6, Name = "tire", 5.99m, 15, 1, 30, 232));
+            inventory.addPart(new Outsourced(MainScreen.inventory.GenerateUniquePartID(), "Motor", 199.99m, 10, 1, 20, "ACME Corp"));
+            inventory.addPart(new Outsourced(MainScreen.inventory.GenerateUniquePartID(), Name = "Gearbox", 89.99m, 15, 1, 30, "ACME Corp"));
+            inventory.addPart(new Outsourced(MainScreen.inventory.GenerateUniquePartID(), Name = "Hub Cap", 89.99m, 15, 1, 30, "ACME Corp"));
+            inventory.addPart(new Inhouse(MainScreen.inventory.GenerateUniquePartID(), Name = "wheel", 29.99m, 15, 1, 30, 230));
+            inventory.addPart(new Inhouse(MainScreen.inventory.GenerateUniquePartID(), Name = "spoke", 9.99m, 15, 1, 30, 231));
+            inventory.addPart(new Inhouse(MainScreen.inventory.GenerateUniquePartID(), Name = "tire", 5.99m, 15, 1, 30, 232));
         }
 
 

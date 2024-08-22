@@ -9,6 +9,9 @@ namespace FinalTaskAppC968
 {
     public class Inventory
     {
+        public int partCounter = 0;
+        public int productCounter = 0;
+
         public BindingList<Product> Products {get; set; }
         public BindingList<Part> AllParts { get; set; }
 
@@ -82,6 +85,15 @@ namespace FinalTaskAppC968
                 oldPart.Min = part.Min;
                 oldPart.Max = part.Max;
             }
+        }
+
+        public int GenerateUniquePartID()
+        {
+            return Interlocked.Increment(ref partCounter);
+        }
+        public int GenerateUniqueProductID()
+        {
+            return Interlocked.Increment(ref productCounter);
         }
     }
 }
